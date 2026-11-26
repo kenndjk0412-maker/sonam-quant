@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SONAM QUANT ECOSYSTEM — Bản Vàng v4.2 Định Lượng Tự Trị 24/7</title>
-  <meta name="description" content="Hệ thống giao dịch định lượng tự trị 24/7 phát triển bởi Đội ngũ Kenndjk, kiểm toán độc lập bởi Akenndjk · 50% Vision / 50% Quant · Toán học xác định · 0-Lookahead · 100% Non-Custodial · TWR-HWM & Prop-8% 0.50x LIVE." />
+  <title>SONAM QUANT ECOSYSTEM — Bản Vàng v4.3 Định Lượng Tự Trị 24/7</title>
+  <meta name="description" content="Hệ thống giao dịch định lượng tự trị 24/7 phát triển bởi Đội ngũ Kenndjk, kiểm toán độc lập bởi Akenndjk · 50% Vision / 50% Quant · Toán học xác định · 0-Lookahead · 100% Non-Custodial · TWR-HWM & Prop-8% 0.50x LIVE · Cổng xem thực chiến chỉ-đọc 1 chạm." />
   <style>
     :root {
       --bg: #080e1a;
@@ -57,34 +57,59 @@
       box-shadow: 0 6px 20px rgba(212,175,55,0.25); transition: transform .15s;
     }
     .btn-gold:hover { transform: translateY(-1px); }
+    .btn-emerald {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: linear-gradient(135deg, #059669, var(--emerald));
+      color: #04130f; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 15px; border-radius: 10px; text-decoration: none;
+      border: 1px solid rgba(16,185,129,0.75);
+      box-shadow: 0 6px 22px rgba(16,185,129,0.28); transition: transform .15s, box-shadow .15s;
+      white-space: nowrap;
+    }
+    .btn-emerald:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(16,185,129,0.40); }
 
     /* Hero */
-    .hero { padding: 52px 0 36px; display: grid; grid-template-columns: 1.45fr 0.75fr; gap: 28px; align-items: center; }
-    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding-top: 32px; } }
+    .hero { padding: 48px 0 34px; display: grid; grid-template-columns: 1.28fr 0.92fr; gap: 26px; align-items: center; }
+    @media (max-width: 920px) { .hero { grid-template-columns: 1fr; padding-top: 30px; } }
     .pill {
       display: inline-flex; align-items: center; gap: 8px;
       border: 1px solid rgba(212,175,55,0.55); background: rgba(24,39,66,0.85);
       color: var(--gold-lt); padding: 6px 14px; border-radius: 999px;
       font-family: Consolas, monospace; font-size: 0.78rem; font-weight: 700; margin-bottom: 18px;
     }
-    h1 { font-size: clamp(2.1rem, 4.6vw, 3.45rem); line-height: 1.08; font-weight: 900; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(2.1rem, 4.4vw, 3.35rem); line-height: 1.08; font-weight: 900; letter-spacing: -0.02em; }
     h1 span { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .hero-sub { font-size: 1.06rem; color: var(--muted); margin: 16px 0 24px; max-width: 680px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .hero-sub { font-size: 1.04rem; color: var(--muted); margin: 16px 0 22px; max-width: 680px; }
+    .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .hero-live-note {
+      margin-top: 12px; font-size: 0.83rem; color: var(--muted);
+      border-left: 3px solid var(--emerald); padding: 6px 12px;
+      background: rgba(16,185,129,0.07); border-radius: 0 8px 8px 0; max-width: 660px;
+    }
+    .hero-live-note strong { color: var(--emerald); }
     .btn-outline {
       display: inline-flex; align-items: center; gap: 8px;
       border: 1px solid var(--border); background: var(--card); color: var(--text);
-      font-weight: 700; font-size: 0.88rem; padding: 9px 16px; border-radius: 10px; text-decoration: none;
+      font-weight: 700; font-size: 0.86rem; padding: 9px 14px; border-radius: 10px; text-decoration: none;
     }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold-lt); }
 
     .qr-hero-card {
       background: linear-gradient(160deg, var(--card), var(--bg2));
-      border: 1.5px solid rgba(212,175,55,0.6); border-radius: 18px; padding: 20px; text-align: center;
+      border: 1.5px solid rgba(212,175,55,0.55); border-radius: 18px; padding: 18px; text-align: center;
       box-shadow: 0 18px 44px rgba(0,0,0,0.45);
     }
-    .qr-hero-card img { width: 184px; max-width: 100%; border-radius: 10px; margin: 10px auto; display: block; }
-    .qr-caption { font-size: 0.82rem; color: var(--muted); }
+    .qr-dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0; }
+    @media (max-width: 440px) { .qr-dual-grid { grid-template-columns: 1fr; } }
+    .qr-slot { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 10px 8px; }
+    .qr-slot.gold { border-color: rgba(212,175,55,0.60); }
+    .qr-slot.emerald { border-color: rgba(16,185,129,0.65); }
+    .qr-slot-lbl { font-family: Consolas, monospace; font-size: 0.72rem; font-weight: 800; margin-bottom: 6px; letter-spacing: 0.03em; }
+    .qr-slot.gold .qr-slot-lbl { color: var(--gold-lt); }
+    .qr-slot.emerald .qr-slot-lbl { color: var(--emerald); }
+    .qr-slot img { width: 138px; max-width: 100%; border-radius: 8px; margin: 0 auto 6px; display: block; }
+    .qr-slot-sub { font-size: 0.73rem; color: var(--muted); line-height: 1.3; }
+    .qr-caption { font-size: 0.80rem; color: var(--muted); margin-top: 6px; }
     .qr-badge { font-family: Consolas, monospace; font-size: 0.76rem; color: var(--emerald); font-weight: 700; margin-top: 8px; }
 
     /* KPI Grid */
@@ -167,13 +192,14 @@
       <div class="brand"><span class="brand-dot"></span> <span id="brand-name">SONAM QUANT ECOSYSTEM</span></div>
       <nav class="nav-links">
         <a href="#audiences">Góc Nhìn</a>
-        <a href="#performance">Hiệu Suất v4.2</a>
+        <a href="#performance">Hiệu Suất v4.3</a>
         <a href="#discipline">98 Nhánh</a>
         <a href="#moats">A-Book &amp; Cá Mập</a>
         <a href="#resilience">Non-Custodial &amp; Thiên Nga Đen</a>
         <a href="#compare">So Sánh</a>
         <a href="#sectors">Đa Ngành</a>
         <a href="#risks">Rủi Ro</a>
+        <a class="btn-emerald" data-live-observer-link href="https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2" target="_blank" rel="noopener noreferrer">● Xem Thực Chiến Trực Tiếp</a>
         <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải PowerPoint Bản Vàng (16 Slide)</a>
       </nav>
     </div>
@@ -182,25 +208,39 @@
   <main class="container">
     <div class="hero">
       <div>
-        <div class="pill" id="version-pill">GOLDEN EDITION · v4.2 Golden Release · 2026-11-26</div>
+        <div class="pill" id="version-pill">GOLDEN EDITION · v4.3 Golden Release · 2026-11-26</div>
         <h1>Hệ Thống Định Lượng <span>Tự Trị 24/7</span><br />Chuẩn Kỷ Luật Quỹ</h1>
         <p class="hero-sub">
           Phát triển &amp; vận hành bởi <strong>Đội ngũ Kenndjk</strong> · Kiểm toán độc lập bởi <strong>Akenndjk</strong>.
           Lõi <strong>50% Vision / 50% Quant · 100% Toán Học Xác Định · 0-Lookahead (MaxAbsErr = 0.0 · CSCV PBO = 0.0%)</strong>,
-          <strong>TWR-HWM &amp; Phanh Tỷ Lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.2 (7ae76ae)</strong>,
+          <strong>TWR-HWM &amp; Phanh Tỷ Lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.3 (4a5a6ae)</strong>,
           <strong>100% Non-Custodial (0% giữ tiền khách)</strong> trên <strong>MT5 Exness Live</strong> &amp; nhánh <strong>CCXT 5 sàn Crypto (Paper-Testnet 30n)</strong>.
         </p>
         <div class="hero-actions">
-          <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải Bản PowerPoint Vàng v4.2 (.pptx)</a>
-          <a class="btn-outline" href="#performance">Xem Số Liệu Live v4.2</a>
-          <a class="btn-outline" href="#resilience">Non-Custodial &amp; Thiên Nga Đen</a>
+          <a class="btn-emerald" data-live-observer-link href="https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2" target="_blank" rel="noopener noreferrer">● Xem Thực Chiến Trực Tiếp (Khán Giả Chỉ-Đọc)</a>
+          <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải Bản PowerPoint Vàng v4.3 (.pptx)</a>
+          <a class="btn-outline" href="#performance">Xem Số Liệu Live v4.3</a>
         </div>
+        <p class="hero-live-note">
+          1 chạm vào thẳng phòng điều hành sống <strong>kenndjk.com</strong> — khóa cứng 100% thao tác phía máy chủ, chỉ hiển thị Tổng quan · Lệnh sống · Biểu đồ · Vĩ mô · Hiệu suất, tự ẩn số tài khoản gốc &amp; kho nghiên cứu nội bộ.
+        </p>
       </div>
       <div class="qr-hero-card">
-        <div style="font-family:Consolas,monospace;font-size:.82rem;font-weight:700;color:var(--gold-lt);">TRANG TĨNH CẬP NHẬT LIÊN TỤC</div>
-        <img src="assets/qr_golden_portal.png" alt="QR Cố Định Sonam Quant Ecosystem" />
-        <div class="qr-caption">Quét mã QR cố định từ PowerPoint để luôn xem phiên bản và số liệu mới nhất — không bao giờ đổi link.</div>
-        <div class="qr-badge" id="commit-badge">● XANH TỰ TRỊ 24/7 [5/5] · Commit 7ae76ae</div>
+        <div style="font-family:Consolas,monospace;font-size:.82rem;font-weight:700;color:var(--gold-lt);">CỔNG QR KÉP · BẢN TĨNH &amp; THỰC CHIẾN</div>
+        <div class="qr-dual-grid">
+          <div class="qr-slot gold">
+            <div class="qr-slot-lbl">QR #1 · BẢN TĨNH</div>
+            <img src="assets/qr_golden_portal.png" alt="QR Cố Định Bản Tĩnh Sonam Quant Ecosystem" />
+            <div class="qr-slot-sub">Đường dẫn vĩnh viễn tự cập nhật phiên bản mới</div>
+          </div>
+          <div class="qr-slot emerald">
+            <div class="qr-slot-lbl">QR #2 · THỰC CHIẾN</div>
+            <img src="assets/qr_live_observer.png" alt="QR Quan Sát Thực Chiến Trực Tiếp Chỉ-Đọc" />
+            <div class="qr-slot-sub">1 chạm vào kenndjk.com · Chỉ-đọc · 0 mật khẩu</div>
+          </div>
+        </div>
+        <a class="btn-emerald" style="width:100%;justify-content:center;margin-top:4px;" data-live-observer-link href="https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2" target="_blank" rel="noopener noreferrer">● Xem Thực Chiến Trực Tiếp (Khán Giả Chỉ-Đọc)</a>
+        <div class="qr-badge" id="commit-badge">● XANH TỰ TRỊ 24/7 [5/5] · Commit 4a5a6ae</div>
       </div>
     </div>
 
@@ -219,9 +259,9 @@
 
     <section id="performance">
       <div class="kicker">02 · Bằng Chứng Thực Nghiệm Mù (OOS 2024–2026 &amp; LIVE 2025–2026)</div>
-      <h2>Hiệu Suất LIVE v4.2 (TWR-HWM &amp; Prop-8% 0.50× · 7ae76ae) Đối Chiếu v4.0 Cũ</h2>
+      <h2>Hiệu Suất LIVE v4.3 (TWR-HWM &amp; Prop-8% 0.50× · 4a5a6ae) Đối Chiếu v4.0 Cũ</h2>
       <div class="chart-box">
-        <img src="assets/chart1_multicap.png" alt="Biểu đồ hiệu suất đa mức vốn LIVE v4.2 so với v4.0 cũ" />
+        <img src="assets/chart1_multicap.png" alt="Biểu đồ hiệu suất đa mức vốn LIVE v4.3 so với v4.0 cũ" />
       </div>
       <div class="table-wrap">
         <table>
@@ -229,10 +269,10 @@
             <tr>
               <th>Cấu hình vốn mẫu</th>
               <th class="num">Vốn đầu</th>
-              <th class="num">Vốn cuối OOS (v4.2)</th>
-              <th class="num">OOS ROI (v4.2 LIVE)</th>
+              <th class="num">Vốn cuối OOS (v4.3)</th>
+              <th class="num">OOS ROI (v4.3 LIVE)</th>
               <th class="num">OOS ROI (v4.0 cũ)</th>
-              <th class="num">Live 25–26 (v4.2)</th>
+              <th class="num">Live 25–26 (v4.3)</th>
               <th class="num">MaxDD USD</th>
               <th class="num">Calmar / Sharpe</th>
               <th>Ghi chú kiểm chứng</th>
@@ -297,7 +337,7 @@
           <thead>
             <tr>
               <th>Tiêu chí</th>
-              <th style="color:#080e1a;background:var(--gold);">SONAM QUANT v4.2 (Đội ngũ Kenndjk)</th>
+              <th style="color:#080e1a;background:var(--gold);">SONAM QUANT v4.3 (Đội ngũ Kenndjk)</th>
               <th>Bot Grid / MQL5 Signal</th>
               <th>Freqtrade / Jesse (OSS)</th>
               <th>QuantConnect / Quỹ nhỏ</th>
@@ -345,7 +385,7 @@
 
     <section id="risks">
       <div class="kicker">08 · Minh Bạch Chuẩn Quỹ</div>
-      <h2>Điểm Cần Lưu Ý &amp; Cơ Chế Kiểm Soát ĐANG CHẠY LIVE v4.2</h2>
+      <h2>Điểm Cần Lưu Ý &amp; Cơ Chế Kiểm Soát ĐANG CHẠY LIVE v4.3</h2>
       <div class="grid-2" id="risk-grid"></div>
     </section>
 
@@ -370,7 +410,7 @@
 
     const AUDIENCE_CONTENT = {
       investor: [
-        { h: "TWR-HWM & Prop-8% 0.50× ĐANG CHẠY LIVE v4.2", p: "OOS $5k tăng lên $8,869 (Calmar 2.22); $50k+AC lên $84,908 (Live 25–26: +24.6%, tăng 3.8×); $250k+AC lên $403,507 (Live 25–26: +24.1%, tăng 5.3×)." },
+        { h: "TWR-HWM & Prop-8% 0.50× ĐANG CHẠY LIVE v4.3", p: "OOS $5k tăng lên $8,869 (Calmar 2.22); $50k+AC lên $84,908 (Live 25–26: +24.6%, tăng 3.8×); $250k+AC lên $403,507 (Live 25–26: +24.1%, tăng 5.3×)." },
         { h: "100% Non-Custodial & Trần Thanh Khoản $266k–$534k", p: "0% giữ tiền khách; lượng hóa trước trượt giá Almgren-Chriss để phân bổ đa cụm thanh khoản $266k–$534k minh bạch, không phóng đại năng lực." },
         { h: "Phòng Thủ Thiên Nga Đen & Tự Trị 24/7 (1–2 Năm)", p: "100% SL cứng nằm trên máy chủ sàn, SAFE MODE Cấp Đỏ không bán tháo đáy flash-crash, tự sao lưu & lưu trữ xoay vòng hoàn toàn độc lập." }
       ],
@@ -390,10 +430,11 @@
     const FALLBACK_DATA = {
       "brand": "SONAM QUANT ECOSYSTEM",
       "tagline": "Hệ Thống Giao Dịch Định Lượng Tự Trị 24/7 · 50% Vision / 50% Quant · Đội Ngũ Kenndjk",
-      "version": "v4.2 Golden Release",
+      "version": "v4.3 Golden Release",
       "release_date": "2026-11-26",
-      "commit_ref": "7ae76ae",
+      "commit_ref": "4a5a6ae",
       "permanent_url": "https://kenndjk0412-maker.github.io/sonam-quant/",
+      "live_observer_url": "https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2",
       "hero_kpis": [
         {
           "value": "0.000000",
@@ -408,7 +449,7 @@
         {
           "value": "24/7 TỰ TRỊ",
           "label": "Vận Hành Bền Bỉ 1–2 Năm",
-          "sub": "TWR-HWM & Prop-8% 0.50× LIVE (7ae76ae) · Giáp SAFE MODE · XANH [5/5]"
+          "sub": "TWR-HWM & Prop-8% 0.50× LIVE (4a5a6ae) · Giáp SAFE MODE · XANH [5/5]"
         },
         {
           "value": "$266k–$534k",
@@ -432,7 +473,7 @@
           "live_roi_pct": 109.8,
           "live_end_usd": 2266,
           "live_dd_pct": 16.55,
-          "note": "Live v4.2 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
+          "note": "Live v4.3 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
         },
         {
           "tier": "$1,080 Cent (USC)",
@@ -766,8 +807,8 @@
           "framing": "Đấu trường Forward thời gian thực đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
         },
         {
-          "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.2 (7ae76ae)",
-          "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.2 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
+          "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.3 (4a5a6ae)",
+          "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.3 (commit 4a5a6ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
         },
         {
           "title": "Kiểm Soát Trượt Giá & Trần Thanh Khoản (Capacity)",
@@ -811,7 +852,7 @@
         },
         {
           "title": "Khóa Nổ Dây Chuyền & Chống Săn Ngược Cỡ Lớn",
-          "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.2, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
+          "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.3, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
         }
       ],
       "non_custodial_models": [
@@ -825,7 +866,7 @@
         },
         {
           "title": "Mô Hình 2 · Managed Account Quỹ ($50k–$500k+)",
-          "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.2 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
+          "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.3 (4a5a6ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
         },
         {
           "title": "Mô Hình 3 · Kiểm Toán Quant Độc Lập B2B (VQ-Lab)",
@@ -871,6 +912,11 @@
       "changelog": [
         {
           "date": "2026-11-26",
+          "ver": "v4.3 Golden Release (4a5a6ae)",
+          "notes": "Bổ sung Cổng Quan Sát Thực Chiến Trực Tiếp 1 chạm (nút Web & mã QR #2 khung ngọc lục bảo vào thẳng kenndjk.com, 0 mật khẩu); siết cứng phân quyền khán giả chỉ-đọc ở tầng máy chủ (chỉ hiển thị Tổng quan · Lệnh sống · Biểu đồ · Vĩ mô · Hiệu suất, tự ẩn số tài khoản gốc và khóa cứng 403 toàn bộ kho nghiên cứu & quản trị)."
+        },
+        {
+          "date": "2026-11-26",
           "ver": "v4.2 Golden Release (7ae76ae)",
           "notes": "Chuẩn hóa toàn diện ngôn ngữ Quỹ Định Lượng Tổ Chức thuần khiết trên 16 slide & cổng Web tĩnh (phát triển bởi Đội ngũ Kenndjk · kiểm toán độc lập bởi Akenndjk); giữ nguyên 100% số liệu thực nghiệm Live (TWR-HWM & Prop-8% 0.50× · XANH [5/5] & 6/6)."
         },
@@ -899,6 +945,9 @@
       document.getElementById("brand-name").textContent = data.brand;
       document.getElementById("version-pill").textContent = `GOLDEN EDITION · ${data.version} · ${data.release_date}`;
       document.getElementById("commit-badge").textContent = `● XANH TỰ TRỊ 24/7 [5/5] · Commit ${data.commit_ref}`;
+      document.querySelectorAll("[data-live-observer-link]").forEach(a => {
+        if (data.live_observer_url) a.href = data.live_observer_url;
+      });
 
       document.getElementById("kpi-grid").innerHTML = (data.hero_kpis || []).map(k => `
         <div class="kpi">

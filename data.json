@@ -1,10 +1,11 @@
 {
   "brand": "SONAM QUANT ECOSYSTEM",
   "tagline": "Hệ Thống Giao Dịch Định Lượng Tự Trị 24/7 · 50% Vision / 50% Quant · Đội Ngũ Kenndjk",
-  "version": "v4.2 Golden Release",
+  "version": "v4.3 Golden Release",
   "release_date": "2026-11-26",
-  "commit_ref": "7ae76ae",
+  "commit_ref": "4a5a6ae",
   "permanent_url": "https://kenndjk0412-maker.github.io/sonam-quant/",
+  "live_observer_url": "https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2",
   "hero_kpis": [
     {
       "value": "0.000000",
@@ -19,7 +20,7 @@
     {
       "value": "24/7 TỰ TRỊ",
       "label": "Vận Hành Bền Bỉ 1–2 Năm",
-      "sub": "TWR-HWM & Prop-8% 0.50× LIVE (7ae76ae) · Giáp SAFE MODE · XANH [5/5]"
+      "sub": "TWR-HWM & Prop-8% 0.50× LIVE (4a5a6ae) · Giáp SAFE MODE · XANH [5/5]"
     },
     {
       "value": "$266k–$534k",
@@ -43,7 +44,7 @@
       "live_roi_pct": 109.8,
       "live_end_usd": 2266,
       "live_dd_pct": 16.55,
-      "note": "Live v4.2 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
+      "note": "Live v4.3 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
     },
     {
       "tier": "$1,080 Cent (USC)",
@@ -182,8 +183,8 @@
       "framing": "Đấu trường Forward thời gian thực đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
     },
     {
-      "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.2 (7ae76ae)",
-      "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.2 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
+      "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.3 (4a5a6ae)",
+      "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.3 (commit 4a5a6ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
     },
     {
       "title": "Kiểm Soát Trượt Giá & Trần Thanh Khoản (Capacity)",
@@ -227,7 +228,7 @@
     },
     {
       "title": "Khóa Nổ Dây Chuyền & Chống Săn Ngược Cỡ Lớn",
-      "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.2, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
+      "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.3, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
     }
   ],
   "non_custodial_models": [
@@ -241,7 +242,7 @@
     },
     {
       "title": "Mô Hình 2 · Managed Account Quỹ ($50k–$500k+)",
-      "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.2 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
+      "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.3 (4a5a6ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
     },
     {
       "title": "Mô Hình 3 · Kiểm Toán Quant Độc Lập B2B (VQ-Lab)",
@@ -285,6 +286,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-26",
+      "ver": "v4.3 Golden Release (4a5a6ae)",
+      "notes": "Bổ sung Cổng Quan Sát Thực Chiến Trực Tiếp 1 chạm (nút Web & mã QR #2 khung ngọc lục bảo vào thẳng kenndjk.com, 0 mật khẩu); siết cứng phân quyền khán giả chỉ-đọc ở tầng máy chủ (chỉ hiển thị Tổng quan · Lệnh sống · Biểu đồ · Vĩ mô · Hiệu suất, tự ẩn số tài khoản gốc và khóa cứng 403 toàn bộ kho nghiên cứu & quản trị)."
+    },
     {
       "date": "2026-11-26",
       "ver": "v4.2 Golden Release (7ae76ae)",
