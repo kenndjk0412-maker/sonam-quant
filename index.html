@@ -46,27 +46,28 @@
     }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.06em; font-size: 1rem; color: var(--gold-lt); }
     .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 10px var(--emerald); }
-    .nav-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.86rem; font-weight: 600; transition: color .2s; }
-    .nav-links a:hover { color: var(--gold-lt); }
-    .btn-gold {
+    .nav-links { display: flex; gap: 11px; flex-wrap: wrap; align-items: center; }
+    .nav-links a:not(.btn-gold):not(.btn-emerald) { color: var(--muted); text-decoration: none; font-size: 0.84rem; font-weight: 600; transition: color .2s; }
+    .nav-links a:not(.btn-gold):not(.btn-emerald):hover { color: var(--gold-lt); }
+    .btn-gold, .nav-links a.btn-gold {
       display: inline-flex; align-items: center; gap: 8px;
       background: linear-gradient(135deg, var(--gold), var(--gold-lt));
-      color: #080e1a; font-weight: 800; font-size: 0.85rem;
-      padding: 9px 16px; border-radius: 10px; text-decoration: none;
+      color: #080e1a; font-weight: 800; font-size: 0.84rem;
+      padding: 8px 14px; border-radius: 10px; text-decoration: none;
       box-shadow: 0 6px 20px rgba(212,175,55,0.25); transition: transform .15s;
+      white-space: nowrap;
     }
-    .btn-gold:hover { transform: translateY(-1px); }
-    .btn-emerald {
+    .btn-gold:hover, .nav-links a.btn-gold:hover { transform: translateY(-1px); color: #080e1a; }
+    .btn-emerald, .nav-links a.btn-emerald {
       display: inline-flex; align-items: center; gap: 7px;
       background: linear-gradient(135deg, #059669, var(--emerald));
-      color: #04130f; font-weight: 800; font-size: 0.85rem;
-      padding: 9px 15px; border-radius: 10px; text-decoration: none;
+      color: #04130f; font-weight: 800; font-size: 0.84rem;
+      padding: 8px 14px; border-radius: 10px; text-decoration: none;
       border: 1px solid rgba(16,185,129,0.75);
       box-shadow: 0 6px 22px rgba(16,185,129,0.28); transition: transform .15s, box-shadow .15s;
       white-space: nowrap;
     }
-    .btn-emerald:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(16,185,129,0.40); }
+    .btn-emerald:hover, .nav-links a.btn-emerald:hover { transform: translateY(-1px); color: #04130f; box-shadow: 0 8px 26px rgba(16,185,129,0.40); }
 
     /* Hero */
     .hero { padding: 48px 0 34px; display: grid; grid-template-columns: 1.28fr 0.92fr; gap: 26px; align-items: center; }
@@ -192,15 +193,15 @@
       <div class="brand"><span class="brand-dot"></span> <span id="brand-name">SONAM QUANT ECOSYSTEM</span></div>
       <nav class="nav-links">
         <a href="#audiences">Góc Nhìn</a>
-        <a href="#performance">Hiệu Suất v4.3</a>
+        <a href="#performance">Hiệu Suất</a>
         <a href="#discipline">98 Nhánh</a>
         <a href="#moats">A-Book &amp; Cá Mập</a>
-        <a href="#resilience">Non-Custodial &amp; Thiên Nga Đen</a>
+        <a href="#resilience">Non-Custodial</a>
         <a href="#compare">So Sánh</a>
         <a href="#sectors">Đa Ngành</a>
         <a href="#risks">Rủi Ro</a>
-        <a class="btn-emerald" data-live-observer-link href="https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2" target="_blank" rel="noopener noreferrer">● Xem Thực Chiến Trực Tiếp</a>
-        <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải PowerPoint Bản Vàng (16 Slide)</a>
+        <a class="btn-emerald" data-live-observer-link href="https://kenndjk.com/moi-xem?ma=BORrCH9XJOPDoonC17AwalCoqy4oZKL2" target="_blank" rel="noopener noreferrer">● Xem Thực Chiến</a>
+        <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải PPTX v4.3</a>
       </nav>
     </div>
   </header>
