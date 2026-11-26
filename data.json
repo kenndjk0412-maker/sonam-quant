@@ -1,15 +1,15 @@
 {
   "brand": "SONAM QUANT ECOSYSTEM",
-  "tagline": "Hệ Thống Giao Dịch Định Lượng Độc Lập 0-AI · 50% Vision / 50% Quant",
-  "version": "v4.1 Golden Release",
+  "tagline": "Hệ Thống Giao Dịch Định Lượng Tự Trị 24/7 · 50% Vision / 50% Quant · Đội Ngũ Kenndjk",
+  "version": "v4.2 Golden Release",
   "release_date": "2026-11-26",
   "commit_ref": "7ae76ae",
   "permanent_url": "https://kenndjk0412-maker.github.io/sonam-quant/",
   "hero_kpis": [
     {
-      "value": "0-ML · 0.0",
+      "value": "0.000000",
       "label": "Sai Số Nhìn Trước (MaxAbsErr)",
-      "sub": "Kiểm chứng Truncate-Future & đầu độc lệnh mở -999R · CSCV PBO = 0.0%"
+      "sub": "100% Luật Toán Học Xác Định · Truncate-Future & -999R · CSCV PBO = 0.0%"
     },
     {
       "value": "98 Nhánh",
@@ -17,8 +17,8 @@
       "sub": "VQ6 → VQ14 loại trung thực bằng Bootstrap 5.000 vòng · DSR(M=98)"
     },
     {
-      "value": "0-AI 24/7",
-      "label": "Vận Hành Độc Lập 1–2 Năm",
+      "value": "24/7 TỰ TRỊ",
+      "label": "Vận Hành Bền Bỉ 1–2 Năm",
       "sub": "TWR-HWM & Prop-8% 0.50× LIVE (7ae76ae) · Giáp SAFE MODE · XANH [5/5]"
     },
     {
@@ -43,7 +43,7 @@
       "live_roi_pct": 109.8,
       "live_end_usd": 2266,
       "live_dd_pct": 16.55,
-      "note": "Live v4.1 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
+      "note": "Live v4.2 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
     },
     {
       "tier": "$1,080 Cent (USC)",
@@ -179,11 +179,11 @@
   "risk_disclosures": [
     {
       "title": "Chu Kỳ Kiểm Chứng Forward Đang Mở Rộng",
-      "framing": "Đấu trường Forward 0-AI đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
+      "framing": "Đấu trường Forward thời gian thực đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
     },
     {
-      "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.1 (7ae76ae)",
-      "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.1 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
+      "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.2 (7ae76ae)",
+      "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.2 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
     },
     {
       "title": "Kiểm Soát Trượt Giá & Trần Thanh Khoản (Capacity)",
@@ -204,8 +204,8 @@
       "desc": "Cổng executor.py chèn jitter ngẫu nhiên 1.0–3.5 giây giữa các tài khoản (sau khi commit DB) trên từng terminal portable riêng biệt cho mỗi tài khoản/khách — triệt tiêu xung lực khớp lệnh đồng thời trong cùng 1 mili-giây."
     },
     {
-      "title": "Ẩn Tên Nguồn Chiến Lược & Két Sắt Alpha (chong_lo_ai.py)",
-      "desc": "Cờ mt5_an_ten_nguon mã hóa comment lệnh thành m412_<id> để che kín tên chiến lược gốc (giữ nguyên mã vận hành chuẩn của hệ thống), kết hợp két alpha_vault cục bộ và tường lửa DLP 5/5 cửa chặn tuyệt đối rò rỉ code sang Cloud AI."
+      "title": "Ẩn Tên Nguồn Chiến Lược & Két Sắt Bảo Vệ Mã Nguồn (DLP 5/5 Lớp)",
+      "desc": "Cờ mt5_an_ten_nguon mã hóa comment lệnh thành m412_<id> để che kín tên chiến lược gốc (giữ nguyên mã vận hành chuẩn của hệ thống), kết hợp két alpha_vault cục bộ và tường lửa DLP 5/5 lớp giữ kín tuyệt đối thuật toán độc quyền nội bộ."
     },
     {
       "title": "Đa Hạ Tầng Thanh Khoản (MT5 Live + CCXT 5 Sàn Paper-Testnet)",
@@ -227,7 +227,7 @@
     },
     {
       "title": "Khóa Nổ Dây Chuyền & Chống Săn Ngược Cỡ Lớn",
-      "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.1, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
+      "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.2, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
     }
   ],
   "non_custodial_models": [
@@ -241,7 +241,7 @@
     },
     {
       "title": "Mô Hình 2 · Managed Account Quỹ ($50k–$500k+)",
-      "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.1 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
+      "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.2 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
     },
     {
       "title": "Mô Hình 3 · Kiểm Toán Quant Độc Lập B2B (VQ-Lab)",
@@ -280,11 +280,16 @@
       "desc": "Thương mại hóa Phòng Lab GL + Phễu kiểm định mù 0-Lookahead 5 cổng như dịch vụ thẩm định chiến lược minh bạch cho quỹ nhỏ, đội quản lý tài sản và cộng đồng trader."
     },
     {
-      "sector": "Trục 4 · Hệ Điều Hành Tự Trị 0-AI Cho Ngành Rủi Ro Cao",
-      "desc": "Nhân bản nguyên khối kiến trúc AI nghiên cứu đối kháng (Carbon ↔ Neon) + Second Brain chuẩn Admiralty A–F + lõi thực thi 0-AI có SAFE MODE sang Pháp chế, Chuỗi cung ứng, Năng lượng và AIOps."
+      "sector": "Trục 4 · Hệ Điều Hành Quyết Định Định Lượng Cho Ngành Rủi Ro Cao",
+      "desc": "Nhân bản nguyên khối quy trình nghiên cứu & kiểm toán đối kháng 2 tầng (Akenndjk ↔ Đội ngũ Kenndjk) + Kho tri thức chuẩn Admiralty A–F + lõi thực thi định lượng tự trị có cầu chì SAFE MODE sang Pháp chế, Chuỗi cung ứng, Năng lượng và Hạ tầng trọng yếu."
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-26",
+      "ver": "v4.2 Golden Release (7ae76ae)",
+      "notes": "Chuẩn hóa toàn diện ngôn ngữ Quỹ Định Lượng Tổ Chức thuần khiết trên 16 slide & cổng Web tĩnh (phát triển bởi Đội ngũ Kenndjk · kiểm toán độc lập bởi Akenndjk); giữ nguyên 100% số liệu thực nghiệm Live (TWR-HWM & Prop-8% 0.50× · XANH [5/5] & 6/6)."
+    },
     {
       "date": "2026-11-26",
       "ver": "v4.1 Golden Release (7ae76ae)",
@@ -293,12 +298,12 @@
     {
       "date": "2026-11-26",
       "ver": "v4.0 Golden Release (7547e34)",
-      "notes": "Bổ sung 2 động cơ xu hướng trực giao tcu_dc55_d1 & tcu_dc120_h1 vào GL_ONLY (|r| ≤ 0.196, sống khỏe 2.0× phí); hoàn tất kiểm toán 98 nhánh VQ5..VQ14 giữ vững Champion VQ5_UNIFIED; Bộ Giáp 0-AI XANH [5/5] & 6/6."
+      "notes": "Bổ sung 2 động cơ xu hướng trực giao tcu_dc55_d1 & tcu_dc120_h1 vào GL_ONLY (|r| ≤ 0.196, sống khỏe 2.0× phí); hoàn tất kiểm toán 98 nhánh VQ5..VQ14 giữ vững Champion VQ5_UNIFIED; Bộ Giáp Tự Trị 24/7 XANH [5/5] & 6/6."
     },
     {
       "date": "2026-11-26",
       "ver": "v3.9 Multi-Market & Resilience (2dd53d0 / 5ebd98a)",
-      "notes": "Hoàn thiện nhánh Crypto Futures CCXT 5 sàn (36/36 test xanh, tích lũy Cổng 30 ngày Paper-Testnet), tối ưu App điều hành :8766 và lưu trữ xoay vòng dài hạn 1–2 năm 0-AI."
+      "notes": "Hoàn thiện nhánh Crypto Futures CCXT 5 sàn (36/36 test xanh, tích lũy Cổng 30 ngày Paper-Testnet), tối ưu App điều hành :8766 và lưu trữ xoay vòng dài hạn 1–2 năm tự trị 24/7."
     }
   ]
 }
