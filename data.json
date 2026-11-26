@@ -1,0 +1,304 @@
+{
+  "brand": "SONAM QUANT ECOSYSTEM",
+  "tagline": "Hệ Thống Giao Dịch Định Lượng Độc Lập 0-AI · 50% Vision / 50% Quant",
+  "version": "v4.1 Golden Release",
+  "release_date": "2026-11-26",
+  "commit_ref": "7ae76ae",
+  "permanent_url": "https://kenndjk0412-maker.github.io/sonam-quant/",
+  "hero_kpis": [
+    {
+      "value": "0-ML · 0.0",
+      "label": "Sai Số Nhìn Trước (MaxAbsErr)",
+      "sub": "Kiểm chứng Truncate-Future & đầu độc lệnh mở -999R · CSCV PBO = 0.0%"
+    },
+    {
+      "value": "98 Nhánh",
+      "label": "Kiểm Định Chống Overfit",
+      "sub": "VQ6 → VQ14 loại trung thực bằng Bootstrap 5.000 vòng · DSR(M=98)"
+    },
+    {
+      "value": "0-AI 24/7",
+      "label": "Vận Hành Độc Lập 1–2 Năm",
+      "sub": "TWR-HWM & Prop-8% 0.50× LIVE (7ae76ae) · Giáp SAFE MODE · XANH [5/5]"
+    },
+    {
+      "value": "$266k–$534k",
+      "label": "Trần Thanh Khoản (Capacity)",
+      "sub": "Đo bằng Almgren-Chriss OOS (Calmar ≥ 1.5 & PF ≥ 1.2) · 100% Non-Custodial"
+    }
+  ],
+  "multi_capital_oos": [
+    {
+      "tier": "$1,080 USD (Pro)",
+      "start_usd": 1080,
+      "end_usd": 3761,
+      "roi_pct": 248.1,
+      "roi_pct_v40": 262.1,
+      "cagr_pct": 53.8,
+      "max_dd_pct": 10.38,
+      "calmar": 5.18,
+      "sharpe": 1.66,
+      "pf": 1.72,
+      "n": 928,
+      "live_roi_pct": 109.8,
+      "live_end_usd": 2266,
+      "live_dd_pct": 16.55,
+      "note": "Live v4.1 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
+    },
+    {
+      "tier": "$1,080 Cent (USC)",
+      "start_usd": 1080,
+      "end_usd": 1931,
+      "roi_pct": 78.7,
+      "roi_pct_v40": 55.6,
+      "cagr_pct": 22.2,
+      "max_dd_pct": 10.43,
+      "calmar": 2.12,
+      "sharpe": 1.39,
+      "pf": 1.39,
+      "n": 941,
+      "live_roi_pct": 30.1,
+      "live_roi_pct_v40": 12.0,
+      "live_end_usd": 1406,
+      "live_dd_pct": 10.4,
+      "note": "Chia lot mịn 100× · Live 25–26: +30.1% (tăng 2.5× so với v4.0: +12.0%)"
+    },
+    {
+      "tier": "$5,000 USD (Pro)",
+      "start_usd": 5000,
+      "end_usd": 8869,
+      "roi_pct": 77.4,
+      "roi_pct_v40": 79.7,
+      "cagr_pct": 21.9,
+      "max_dd_pct": 9.86,
+      "calmar": 2.22,
+      "sharpe": 1.44,
+      "pf": 1.42,
+      "n": 928,
+      "live_roi_pct": 33.5,
+      "live_end_usd": 6675,
+      "live_dd_pct": 10.06,
+      "note": "Điểm cân bằng vàng · Calmar 2.22 · Live 25–26: +33.5% (DD 10.06%)"
+    },
+    {
+      "tier": "$50,000 USD (+AC k=0.7)",
+      "start_usd": 50000,
+      "end_usd": 84908,
+      "roi_pct": 69.8,
+      "roi_pct_v40": 43.9,
+      "cagr_pct": 20.0,
+      "max_dd_pct": 10.66,
+      "calmar": 1.88,
+      "sharpe": 1.28,
+      "pf": 1.36,
+      "n": 941,
+      "live_roi_pct": 24.6,
+      "live_roi_pct_v40": 6.4,
+      "live_end_usd": 62280,
+      "live_dd_pct": 10.47,
+      "note": "Trừ trượt giá AC k=0.70 · Live 25–26: +24.6% (tăng 3.8× từ +6.4%)"
+    },
+    {
+      "tier": "$250,000 USD (+AC k=0.7)",
+      "start_usd": 250000,
+      "end_usd": 403507,
+      "roi_pct": 61.4,
+      "roi_pct_v40": 45.0,
+      "cagr_pct": 18.0,
+      "max_dd_pct": 10.68,
+      "calmar": 1.68,
+      "sharpe": 1.16,
+      "pf": 1.32,
+      "n": 941,
+      "live_roi_pct": 24.1,
+      "live_roi_pct_v40": 4.5,
+      "live_end_usd": 310293,
+      "live_dd_pct": 10.69,
+      "note": "Trượt giá TB 0.034R/lệnh · Live 25–26: +24.1% (tăng 5.3× từ +4.5%)"
+    }
+  ],
+  "capacity_curve_k070": [
+    {"cap_k": 1.08, "cagr": 53.6, "dd": 10.21, "calmar": 5.25, "pf": 1.72},
+    {"cap_k": 5, "cagr": 21.4, "dd": 9.62, "calmar": 2.23, "pf": 1.42},
+    {"cap_k": 25, "cagr": 17.1, "dd": 9.72, "calmar": 1.76, "pf": 1.37},
+    {"cap_k": 50, "cagr": 17.5, "dd": 9.02, "calmar": 1.94, "pf": 1.38},
+    {"cap_k": 100, "cagr": 18.0, "dd": 8.91, "calmar": 2.02, "pf": 1.39},
+    {"cap_k": 175, "cagr": 16.4, "dd": 9.01, "calmar": 1.82, "pf": 1.36},
+    {"cap_k": 250, "cagr": 16.0, "dd": 8.87, "calmar": 1.80, "pf": 1.35},
+    {"cap_k": 350, "cagr": 15.7, "dd": 8.97, "calmar": 1.75, "pf": 1.35},
+    {"cap_k": 500, "cagr": 14.3, "dd": 9.07, "calmar": 1.58, "pf": 1.32},
+    {"cap_k": 750, "cagr": 10.6, "dd": 8.53, "calmar": 1.24, "pf": 1.29},
+    {"cap_k": 1000, "cagr": 10.0, "dd": 8.28, "calmar": 1.21, "pf": 1.27}
+  ],
+  "capacity_curve_k100": [
+    {"cap_k": 1.08, "cagr": 53.3, "dd": 10.28, "calmar": 5.19, "pf": 1.72},
+    {"cap_k": 5, "cagr": 19.9, "dd": 9.97, "calmar": 2.00, "pf": 1.40},
+    {"cap_k": 25, "cagr": 16.7, "dd": 9.75, "calmar": 1.72, "pf": 1.36},
+    {"cap_k": 50, "cagr": 18.1, "dd": 8.89, "calmar": 2.04, "pf": 1.39},
+    {"cap_k": 100, "cagr": 16.1, "dd": 9.03, "calmar": 1.78, "pf": 1.35},
+    {"cap_k": 175, "cagr": 15.6, "dd": 8.96, "calmar": 1.75, "pf": 1.35},
+    {"cap_k": 250, "cagr": 14.3, "dd": 9.08, "calmar": 1.57, "pf": 1.32},
+    {"cap_k": 350, "cagr": 10.5, "dd": 8.51, "calmar": 1.24, "pf": 1.29},
+    {"cap_k": 500, "cagr": 10.0, "dd": 8.27, "calmar": 1.20, "pf": 1.27},
+    {"cap_k": 750, "cagr": 9.3, "dd": 8.38, "calmar": 1.11, "pf": 1.25},
+    {"cap_k": 1000, "cagr": 8.4, "dd": 8.47, "calmar": 0.99, "pf": 1.23}
+  ],
+  "vq_trials_summary": [
+    {"round": "VQ6–8", "trials": 40, "focus": "Xác suất / Phanh tuyến tính / CS20", "verdict": "Loại (nhiễu đồng phương sai & hòa hằng số)"},
+    {"round": "VQ9", "trials": 8, "focus": "Bước nhảy BNS / BPV / Skew", "verdict": "Loại (đảo dấu IS → OOS)"},
+    {"round": "VQ10", "trials": 7, "focus": "Hình học D1 KER/CHOP/PK", "verdict": "Loại (lõi Vision VQ5 bất bại)"},
+    {"round": "VQ11", "trials": 23, "focus": "CPPI-2 / Asym / Streak", "verdict": "Loại (thua vốn nhỏ & hằng số)"},
+    {"round": "VQ12", "trials": 4, "focus": "Tương quan AR_z / ResidMom", "verdict": "Loại (ngược dấu bot 2 chiều)"},
+    {"round": "VQ13", "trials": 13, "focus": "EqGate / Vĩ mô PIT / CapGuard", "verdict": "Loại (định lý Cauchy-Schwarz)"},
+    {"round": "VQ14", "trials": 3, "focus": "50/50 Parity / Erlang Queue", "verdict": "Loại (0/30 ô p<0.05 · DSR≤0.067)"}
+  ],
+  "orthogonal_strategies": [
+    {
+      "id": "tcu_dc120_h1",
+      "name": "Donchian 120/40 H1 (TSM)",
+      "tf": "H1",
+      "symbols": "XAUUSD · BTCUSD · ETHUSD",
+      "r_1x": [92.35, 297.13, 312.49],
+      "r_2x": [73.64, 257.15, 261.70],
+      "pf_1x": [1.28, 1.67, 1.77],
+      "pf_2x": [1.22, 1.55, 1.60],
+      "corr_max": 0.196,
+      "highlight": "ETHUSD dương 9/9 năm liên tiếp (2018–2026) · Vượt stress 2.0× phí"
+    },
+    {
+      "id": "tcu_dc55_d1",
+      "name": "Donchian 55/20 D1 (XAU-12)",
+      "tf": "D1",
+      "symbols": "XAUUSD · BTCUSD · ETHUSD · USTEC · USOIL",
+      "r_total": [36.75, 51.73, 74.58, 11.72, 16.16],
+      "pf_total": [2.70, 3.43, 6.24, 1.62, 1.61],
+      "corr_max": 0.018,
+      "highlight": "Đuôi sóng lớn D1 · Tương quan chỉ -0.018 với H1 (trùng < 0.7%)"
+    }
+  ],
+  "risk_disclosures": [
+    {
+      "title": "Chu Kỳ Kiểm Chứng Forward Đang Mở Rộng",
+      "framing": "Đấu trường Forward 0-AI đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
+    },
+    {
+      "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.1 (7ae76ae)",
+      "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.1 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
+    },
+    {
+      "title": "Kiểm Soát Trượt Giá & Trần Thanh Khoản (Capacity)",
+      "framing": "Chủ động mô hình hóa tác động thị trường Almgren-Chriss (k=0.70 chuẩn / k=1.00 stress) để xác định rõ vùng tối ưu $266k–$534k mỗi cụm thanh khoản — làm cơ sở phân bổ đa tài khoản và mở rộng hạ tầng đa sàn khi vượt quy mô."
+    },
+    {
+      "title": "Quản Trị Rủi Ro Đuôi & Trạng Thái Crypto Futures",
+      "framing": "MT5 Exness đang chạy Live tiền thật ổn định; nhánh Crypto CCXT 5 sàn (Binance/Bybit/BingX/Bitget/OKX, Isolated ≤ 3×, 36/36 test xanh) đang tích lũy đủ Cổng Sẵn Sàng 30 ngày / 30 lệnh Paper-Testnet trước khi bật tiền thật, song song tầng Vĩ mô PIT chạy Shadow độc lập."
+    }
+  ],
+  "stealth_layers": [
+    {
+      "title": "0% Toxic Flow (Dòng Lệnh Chuẩn A-Book / ECN)",
+      "desc": "Tần suất ~0.9–1.5 lệnh/ngày, nắm giữ nhiều giờ đến nhiều ngày trên M15/H1/H4/D1; 0% tick-scalp, 0% latency-arbitrage, 0% spam sửa lệnh từng giây nên tương thích hoàn toàn với mô hình thanh khoản ECN/A-Book mà không xung đột lợi ích với sàn."
+    },
+    {
+      "title": "Nhịp Trễ Bất Đồng Bộ 1.0–3.5s & Terminal Độc Lập",
+      "desc": "Cổng executor.py chèn jitter ngẫu nhiên 1.0–3.5 giây giữa các tài khoản (sau khi commit DB) trên từng terminal portable riêng biệt cho mỗi tài khoản/khách — triệt tiêu xung lực khớp lệnh đồng thời trong cùng 1 mili-giây."
+    },
+    {
+      "title": "Ẩn Tên Nguồn Chiến Lược & Két Sắt Alpha (chong_lo_ai.py)",
+      "desc": "Cờ mt5_an_ten_nguon mã hóa comment lệnh thành m412_<id> để che kín tên chiến lược gốc (giữ nguyên mã vận hành chuẩn của hệ thống), kết hợp két alpha_vault cục bộ và tường lửa DLP 5/5 cửa chặn tuyệt đối rò rỉ code sang Cloud AI."
+    },
+    {
+      "title": "Đa Hạ Tầng Thanh Khoản (MT5 Live + CCXT 5 Sàn Paper-Testnet)",
+      "desc": "MT5 Exness chạy Live tiền thật song song nhánh CCXT 5 sàn Crypto Futures (Binance, Bybit, BingX, Bitget, OKX · Isolated ≤ 3× · 36/36 tests xanh, đang tích lũy Cổng Sẵn Sàng 30 ngày Paper-Testnet); Chặng 2 tách cụm máy chủ Copy-Trade riêng & mở rộng Perp DEX."
+    }
+  ],
+  "anti_whale_armor": [
+    {
+      "title": "Radar Dấu Chân Cá Mập & Dòng Tiền Lớn",
+      "desc": "Theo dõi liên tục vị thế cá mập Hyperliquid, báo cáo Smart Money COT, dòng tiền Stablecoin và bộ chỉ báo hoảng loạn vĩ mô DXY / VIX / US10Y / Fear & Greed."
+    },
+    {
+      "title": "Bộ Lọc Bẫy Phá Vỡ Giả (Cứu -51.44R Thực Nghiệm)",
+      "desc": "Lõi VQ5_UNIFIED tích hợp cổng chặn bẫy is_trap, cấm ngược H4 và cấm bán chỉ số sai pha — tự động loại bỏ các cú đẩy râu quét thanh khoản của cá mập trước khi vào lệnh."
+    },
+    {
+      "title": "Khóa Giờ Thanh Khoản Mỏng & Chống Quét Râu Stop-Hunt",
+      "desc": "Khóa cứng 04:00–07:00 VN (21:00–23:59 UTC) khi spread giãn mạnh; đặt SL toán học 2×ATR14 ngoài vùng nhiễu râu và tắt dời BE sớm trên động cơ sóng lớn H1/D1 để không bị hất văng trước siêu sóng."
+    },
+    {
+      "title": "Khóa Nổ Dây Chuyền & Chống Săn Ngược Cỡ Lớn",
+      "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.1, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
+    }
+  ],
+  "non_custodial_models": [
+    {
+      "title": "100% Non-Custodial — 0% Giữ Tiền Khách Hàng",
+      "desc": "Tiền nằm 100% trên tài khoản sàn chính chủ (Exness/Crypto) của khách. Kết nối MT5 qua 1-click re-auth (BRD-206, admin 0-chạm mật khẩu thô), chỉ đóng các lệnh mang nhãn \"copy ...\" (0 đụng lệnh tự giao dịch). API Crypto khóa cứng withdraw_disabled=True + mã hóa Windows DPAPI."
+    },
+    {
+      "title": "Mô Hình 1 · Copy-Trade Theo Gói Trần Rủi Ro Cứng",
+      "desc": "Plan A ($300–$1k): trần 1.5%/lệnh · 4.5%/ngày · Plan B ($1.05k–$5k): trần 1.2%/lệnh · 3.6%/ngày · Plan C ($5.05k–$150k): trần 1.0%/lệnh · 3.0%/ngày. Hỗ trợ cả tài khoản Cent (USC chia lot 100×) lẫn Pro."
+    },
+    {
+      "title": "Mô Hình 2 · Managed Account Quỹ ($50k–$500k+)",
+      "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.1 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
+    },
+    {
+      "title": "Mô Hình 3 · Kiểm Toán Quant Độc Lập B2B (VQ-Lab)",
+      "desc": "Cung cấp dịch vụ kiểm định mù 0-Lookahead (Truncate-Future + đầu độc -999R), đo CSCV PBO, DSR kiểm định bội & mô phỏng trượt giá Almgren-Chriss cho quỹ nhỏ và đội quản lý tài sản."
+    }
+  ],
+  "black_swan_quant": [
+    {
+      "title": "Mất Điện / Đứt Cáp Cục Bộ — 100% SL Cứng Nằm Trên Máy Chủ Sàn",
+      "desc": "Mọi vị thế MT5 Exness gửi kèm SL cứng trực tiếp lên máy chủ sàn. Trên Crypto (live_engine.py), ngay khi khớp lập tức đặt STOP_MARKET reduceOnly=True; nếu đặt SL sàn lỗi thì đóng khẩn MARKET reduceOnly ngay lập tức và tự ngắt live_armed=False."
+    },
+    {
+      "title": "Sốc Thanh Khoản & Flash-Crash — Khóa Giờ & SAFE MODE Không Bán Tháo",
+      "desc": "Khóa cứng mở mới 04:00–07:00 VN (21:00–23:59 UTC) khi spread giãn & gap chuyển ngày; Crypto khóa cứng Isolated ≤ 3×; cầu chì SAFE MODE Cấp Đỏ chỉ bật paused=1 (ngừng mở mới) — tuyệt đối không bán tháo đúng đáy râu quét."
+    },
+    {
+      "title": "Giải Trình Quant: Vì Sao Win-Rate ~33–34% Vẫn Bền Vững?",
+      "desc": "Cơ cấu bất đối xứng dương: Win-rate ~33–34% × Payoff lồi ~2.6R–3.1R (cắt lỗ nhanh, thả đuôi siêu sóng). Rủi ro thực mỗi lệnh chỉ ~0.34%–0.45% vốn nên chuỗi 10 lệnh thua liên tiếp chỉ sụt ~3.5%–4.5% và tự hạ tốc êm 0.50× tại ngưỡng -8% DD."
+    },
+    {
+      "title": "Kỷ Luật Chống Ngụy Tạo Dữ Liệu (PBO = 0.0% · N_trials = 98)",
+      "desc": "CSCV PBO OOS = 0.0% trên toàn bộ 5 tầng vốn; mọi thử nghiệm VQ1..VQ14 đều ghi sổ công khai — thẳng tay REJECT toàn bộ 98 nhánh VQ6..VQ14 khi trượt chuẩn Bootstrap 5.000 & DSR(M=98) thay vì che giấu thất bại."
+    }
+  ],
+  "multi_sector_pillars": [
+    {
+      "sector": "Trục 1 · Đa Tài Sản Tài Chính",
+      "desc": "Đã phủ 5 lớp tài sản (Vàng · Crypto · Chỉ số · Năng lượng · FX) trên MT5 Live + CCXT 5 sàn Crypto (Paper-Testnet 30n); sẵn sàng mở rộng sang Cổ phiếu Mỹ/VN, Hàng hóa phái sinh và Perp DEX."
+    },
+    {
+      "sector": "Trục 2 · Kho Bạc & Phòng Hộ Doanh Nghiệp (Treasury)",
+      "desc": "Ứng dụng lõi quản trị rủi ro cứng + dữ liệu vĩ mô PIT để tự động phòng hộ biến động tỷ giá xuất nhập khẩu (FX), giá dầu/nguyên liệu và dòng tiền dự phòng doanh nghiệp."
+    },
+    {
+      "sector": "Trục 3 · Quant-as-a-Service & Kiểm Định Độc Lập",
+      "desc": "Thương mại hóa Phòng Lab GL + Phễu kiểm định mù 0-Lookahead 5 cổng như dịch vụ thẩm định chiến lược minh bạch cho quỹ nhỏ, đội quản lý tài sản và cộng đồng trader."
+    },
+    {
+      "sector": "Trục 4 · Hệ Điều Hành Tự Trị 0-AI Cho Ngành Rủi Ro Cao",
+      "desc": "Nhân bản nguyên khối kiến trúc AI nghiên cứu đối kháng (Carbon ↔ Neon) + Second Brain chuẩn Admiralty A–F + lõi thực thi 0-AI có SAFE MODE sang Pháp chế, Chuỗi cung ứng, Năng lượng và AIOps."
+    }
+  ],
+  "changelog": [
+    {
+      "date": "2026-11-26",
+      "ver": "v4.1 Golden Release (7ae76ae)",
+      "notes": "Đưa Đợt 6 lên CHẠY LIVE trên sản xuất: HWM chuẩn TWR điều chỉnh nạp/rút + Phanh tỷ lệ Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k lên +24.6% và 5.3× ở $250k lên +24.1%); bổ sung Slide 14 Non-Custodial 0% giữ tiền · Phòng thủ Thiên Nga Đen · Giải trình Quant WR ~33–34% & chuẩn hóa Slide 9 tương thích thanh khoản ECN/A-Book."
+    },
+    {
+      "date": "2026-11-26",
+      "ver": "v4.0 Golden Release (7547e34)",
+      "notes": "Bổ sung 2 động cơ xu hướng trực giao tcu_dc55_d1 & tcu_dc120_h1 vào GL_ONLY (|r| ≤ 0.196, sống khỏe 2.0× phí); hoàn tất kiểm toán 98 nhánh VQ5..VQ14 giữ vững Champion VQ5_UNIFIED; Bộ Giáp 0-AI XANH [5/5] & 6/6."
+    },
+    {
+      "date": "2026-11-26",
+      "ver": "v3.9 Multi-Market & Resilience (2dd53d0 / 5ebd98a)",
+      "notes": "Hoàn thiện nhánh Crypto Futures CCXT 5 sàn (36/36 test xanh, tích lũy Cổng 30 ngày Paper-Testnet), tối ưu App điều hành :8766 và lưu trữ xoay vòng dài hạn 1–2 năm 0-AI."
+    }
+  ]
+}

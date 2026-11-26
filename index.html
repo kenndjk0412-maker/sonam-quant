@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SONAM QUANT ECOSYSTEM — Bản Vàng v4.1 Định Lượng Độc Lập 0-AI</title>
+  <meta name="description" content="Hệ thống giao dịch định lượng độc lập 0-AI · 50% Vision / 50% Quant · 0-ML · 0-Lookahead · 100% Non-Custodial · TWR-HWM & Prop-8% 0.50x LIVE." />
+  <style>
+    :root {
+      --bg: #080e1a;
+      --bg2: #0e1729;
+      --card: #131f35;
+      --card2: #182742;
+      --border: #243656;
+      --gold: #d4af37;
+      --gold-lt: #f5d77a;
+      --emerald: #10b981;
+      --cyan: #38bdf8;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      background: radial-gradient(circle at 12% 8%, rgba(212,175,55,0.11), transparent 38%),
+                  radial-gradient(circle at 88% 15%, rgba(16,185,129,0.08), transparent 36%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .gold-bar { height: 4px; background: linear-gradient(90deg, var(--gold), var(--gold-lt), var(--emerald)); }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+
+    /* Top Nav */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(8,14,26,0.90); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,175,55,0.22);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; padding: 14px 0; flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.06em; font-size: 1rem; color: var(--gold-lt); }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--emerald); box-shadow: 0 0 10px var(--emerald); }
+    .nav-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.86rem; font-weight: 600; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-lt));
+      color: #080e1a; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 16px; border-radius: 10px; text-decoration: none;
+      box-shadow: 0 6px 20px rgba(212,175,55,0.25); transition: transform .15s;
+    }
+    .btn-gold:hover { transform: translateY(-1px); }
+
+    /* Hero */
+    .hero { padding: 52px 0 36px; display: grid; grid-template-columns: 1.45fr 0.75fr; gap: 28px; align-items: center; }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; padding-top: 32px; } }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(212,175,55,0.55); background: rgba(24,39,66,0.85);
+      color: var(--gold-lt); padding: 6px 14px; border-radius: 999px;
+      font-family: Consolas, monospace; font-size: 0.78rem; font-weight: 700; margin-bottom: 18px;
+    }
+    h1 { font-size: clamp(2.1rem, 4.6vw, 3.45rem); line-height: 1.08; font-weight: 900; letter-spacing: -0.02em; }
+    h1 span { background: linear-gradient(90deg, var(--gold), var(--gold-lt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero-sub { font-size: 1.06rem; color: var(--muted); margin: 16px 0 24px; max-width: 680px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid var(--border); background: var(--card); color: var(--text);
+      font-weight: 700; font-size: 0.88rem; padding: 9px 16px; border-radius: 10px; text-decoration: none;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold-lt); }
+
+    .qr-hero-card {
+      background: linear-gradient(160deg, var(--card), var(--bg2));
+      border: 1.5px solid rgba(212,175,55,0.6); border-radius: 18px; padding: 20px; text-align: center;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.45);
+    }
+    .qr-hero-card img { width: 184px; max-width: 100%; border-radius: 10px; margin: 10px auto; display: block; }
+    .qr-caption { font-size: 0.82rem; color: var(--muted); }
+    .qr-badge { font-family: Consolas, monospace; font-size: 0.76rem; color: var(--emerald); font-weight: 700; margin-top: 8px; }
+
+    /* KPI Grid */
+    .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0 42px; }
+    @media (max-width: 900px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .kpi-grid { grid-template-columns: 1fr; } }
+    .kpi {
+      background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--gold);
+      border-radius: 14px; padding: 18px;
+    }
+    .kpi:nth-child(2) { border-left-color: var(--emerald); }
+    .kpi:nth-child(3) { border-left-color: var(--cyan); }
+    .kpi-val { font-family: Consolas, monospace; font-size: 1.62rem; font-weight: 900; color: var(--gold-lt); }
+    .kpi:nth-child(2) .kpi-val { color: var(--emerald); }
+    .kpi:nth-child(3) .kpi-val { color: var(--cyan); }
+    .kpi-lbl { font-weight: 700; font-size: 0.94rem; margin-top: 4px; }
+    .kpi-sub { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+
+    /* Sections */
+    section { padding: 36px 0; border-top: 1px solid rgba(36,54,86,0.65); }
+    .kicker { font-family: Consolas, monospace; font-size: 0.78rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    h2 { font-size: clamp(1.4rem, 2.6vw, 2.05rem); font-weight: 850; margin: 6px 0 18px; }
+
+    /* Audience Switcher */
+    .tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .tab-btn {
+      background: var(--card); color: var(--muted); border: 1px solid var(--border);
+      padding: 9px 16px; border-radius: 10px; cursor: pointer; font-weight: 700; font-size: 0.88rem;
+      transition: all .18s;
+    }
+    .tab-btn.active { background: var(--card2); color: var(--gold-lt); border-color: var(--gold); }
+    .aud-panel { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    .aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 780px) { .aud-grid { grid-template-columns: 1fr; } }
+    .aud-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+    .aud-item h3 { font-size: 0.98rem; color: var(--gold-lt); margin-bottom: 6px; }
+    .aud-item p { font-size: 0.88rem; color: var(--muted); }
+
+    /* Charts & Tables */
+    .chart-box {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 14px; margin-bottom: 20px; text-align: center;
+    }
+    .chart-box img { width: 100%; height: auto; border-radius: 8px; display: block; }
+    .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border); background: var(--card); }
+    table { width: 100%; border-collapse: collapse; min-width: 780px; }
+    th, td { padding: 11px 12px; text-align: left; border-bottom: 1px solid rgba(36,54,86,0.7); font-size: 0.86rem; }
+    th { background: var(--card2); color: var(--gold-lt); font-family: Consolas, monospace; font-size: 0.80rem; }
+    td.num { font-family: Consolas, monospace; text-align: right; white-space: nowrap; }
+    td.good { color: var(--emerald); font-weight: 700; }
+    td.dim { color: var(--muted); }
+    tr:last-child td { border-bottom: none; }
+
+    /* Two Column & Cards */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    @media (max-width: 820px) { .grid-2 { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+    .card h3 { font-size: 1.02rem; color: var(--gold-lt); margin-bottom: 8px; }
+    .card p { font-size: 0.89rem; color: var(--muted); }
+    .risk-card { border-left: 4px solid var(--cyan); }
+    .risk-card:nth-child(2) { border-left-color: var(--emerald); }
+    .risk-card:nth-child(3) { border-left-color: var(--gold); }
+    .risk-card:nth-child(4) { border-left-color: var(--amber); }
+
+    /* Changelog */
+    .log-item { padding: 14px 16px; border-left: 3px solid var(--gold); background: var(--card); border-radius: 0 12px 12px 0; margin-bottom: 12px; }
+    .log-meta { font-family: Consolas, monospace; font-size: 0.8rem; color: var(--gold-lt); font-weight: 700; }
+    .log-text { font-size: 0.9rem; color: var(--text); margin-top: 4px; }
+
+    footer {
+      margin-top: 40px; padding: 28px 0 42px; border-top: 1px solid rgba(212,175,55,0.25);
+      color: var(--muted); font-size: 0.82rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="gold-bar"></div>
+  <header>
+    <div class="container nav-inner">
+      <div class="brand"><span class="brand-dot"></span> <span id="brand-name">SONAM QUANT ECOSYSTEM</span></div>
+      <nav class="nav-links">
+        <a href="#audiences">Góc Nhìn</a>
+        <a href="#performance">Hiệu Suất v4.1</a>
+        <a href="#discipline">98 Nhánh</a>
+        <a href="#moats">A-Book &amp; Cá Mập</a>
+        <a href="#resilience">Non-Custodial &amp; Thiên Nga Đen</a>
+        <a href="#compare">So Sánh</a>
+        <a href="#sectors">Đa Ngành</a>
+        <a href="#risks">Rủi Ro</a>
+        <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải PowerPoint Bản Vàng (16 Slide)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <div>
+        <div class="pill" id="version-pill">GOLDEN EDITION · v4.1 Golden Release · 2026-11-26</div>
+        <h1>Hệ Thống Định Lượng <span>Độc Lập 0-AI</span><br />Chuẩn Kỷ Luật Quỹ</h1>
+        <p class="hero-sub">
+          Lõi <strong>50% Vision / 50% Quant · 0-ML · 0-Lookahead (MaxAbsErr = 0.0 · CSCV PBO = 0.0%)</strong>,
+          <strong>TWR-HWM &amp; Phanh Tỷ Lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.1 (7ae76ae)</strong>,
+          <strong>100% Non-Custodial (0% giữ tiền khách)</strong> trên <strong>MT5 Exness Live</strong> &amp; nhánh <strong>CCXT 5 sàn Crypto (Paper-Testnet 30n)</strong>.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-gold" href="Sonam-Quant-Golden-Deck.pptx" download>Tải Bản PowerPoint Vàng v4.1 (.pptx)</a>
+          <a class="btn-outline" href="#performance">Xem Số Liệu Live v4.1</a>
+          <a class="btn-outline" href="#resilience">Non-Custodial &amp; Thiên Nga Đen</a>
+        </div>
+      </div>
+      <div class="qr-hero-card">
+        <div style="font-family:Consolas,monospace;font-size:.82rem;font-weight:700;color:var(--gold-lt);">TRANG TĨNH CẬP NHẬT LIÊN TỤC</div>
+        <img src="assets/qr_golden_portal.png" alt="QR Cố Định Sonam Quant Ecosystem" />
+        <div class="qr-caption">Quét mã QR cố định từ PowerPoint để luôn xem phiên bản và số liệu mới nhất — không bao giờ đổi link.</div>
+        <div class="qr-badge" id="commit-badge">● XANH 0-AI [5/5] · Commit 7ae76ae</div>
+      </div>
+    </div>
+
+    <div class="kpi-grid" id="kpi-grid"></div>
+
+    <section id="audiences">
+      <div class="kicker">01 · Giá Trị Cho 3 Nhóm Đối Tượng</div>
+      <h2>Vì Sao Nhà Đầu Tư, Người Theo Copy-Trade &amp; Kỹ Sư Quant Đều Đánh Giá Cao?</h2>
+      <div class="tabs">
+        <button class="tab-btn active" data-aud="investor">Nhà Đầu Tư &amp; Quỹ</button>
+        <button class="tab-btn" data-aud="copy">Người Theo Copy-Trade</button>
+        <button class="tab-btn" data-aud="quant">Kỹ Sư Quant &amp; Công Nghệ</button>
+      </div>
+      <div class="aud-panel" id="aud-panel"></div>
+    </section>
+
+    <section id="performance">
+      <div class="kicker">02 · Bằng Chứng Thực Nghiệm Mù (OOS 2024–2026 &amp; LIVE 2025–2026)</div>
+      <h2>Hiệu Suất LIVE v4.1 (TWR-HWM &amp; Prop-8% 0.50× · 7ae76ae) Đối Chiếu v4.0 Cũ</h2>
+      <div class="chart-box">
+        <img src="assets/chart1_multicap.png" alt="Biểu đồ hiệu suất đa mức vốn LIVE v4.1 so với v4.0 cũ" />
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Cấu hình vốn mẫu</th>
+              <th class="num">Vốn đầu</th>
+              <th class="num">Vốn cuối OOS (v4.1)</th>
+              <th class="num">OOS ROI (v4.1 LIVE)</th>
+              <th class="num">OOS ROI (v4.0 cũ)</th>
+              <th class="num">Live 25–26 (v4.1)</th>
+              <th class="num">MaxDD USD</th>
+              <th class="num">Calmar / Sharpe</th>
+              <th>Ghi chú kiểm chứng</th>
+            </tr>
+          </thead>
+          <tbody id="multicap-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="discipline">
+      <div class="kicker">03 · Kỷ Luật Khoa Học &amp; Nguồn Alpha Trực Giao</div>
+      <h2>98 Nhánh Loại Trung Thực &amp; Bộ Động Cơ Xu Hướng Tương Quan |r| ≤ 0.196</h2>
+      <div class="grid-2" style="margin-bottom:18px;">
+        <div class="chart-box" style="margin-bottom:0;">
+          <img src="assets/chart2_98trials.png" alt="Phễu kiểm định 98 nhánh VQ6-VQ14" />
+        </div>
+        <div class="chart-box" style="margin-bottom:0;">
+          <img src="assets/chart4_capacity.png" alt="Đường cong trần thanh khoản Almgren-Chriss" />
+        </div>
+      </div>
+      <div class="chart-box">
+        <img src="assets/chart3_orthogonal.png" alt="Động cơ xu hướng trực giao vượt stress 2.0x phí" />
+      </div>
+    </section>
+
+    <section id="moats">
+      <div class="kicker">04 · Tương Thích A-Book/ECN &amp; Giáp Chống Cá Mập</div>
+      <h2>Tương Thích Thanh Khoản Sàn (A-Book/ECN) · Bảo Vệ IP Alpha &amp; 4 Lớp Giáp Chống Cá Mập</h2>
+      <div class="grid-2" style="margin-bottom:22px;">
+        <div>
+          <div class="kicker" style="color:var(--gold-lt);margin-bottom:10px;">A. TƯƠNG THÍCH SÀN ECN/A-BOOK &amp; BẢO VỆ IP ALPHA</div>
+          <div id="stealth-grid" style="display:grid;gap:12px;"></div>
+        </div>
+        <div>
+          <div class="kicker" style="color:var(--emerald);margin-bottom:10px;">B. GIÁP CHỐNG CÁ MẬP &amp; QUÉT THANH KHOẢN</div>
+          <div id="whale-grid" style="display:grid;gap:12px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resilience">
+      <div class="kicker">05 · Quản Trị Quỹ, Non-Custodial &amp; Phòng Thủ Thiên Nga Đen</div>
+      <h2>100% Non-Custodial (0% Giữ Tiền) · Sống Sót Thiên Nga Đen &amp; Giải Trình Đối Kháng Quant</h2>
+      <div class="grid-2" style="margin-bottom:22px;">
+        <div>
+          <div class="kicker" style="color:var(--gold-lt);margin-bottom:10px;">A. 100% NON-CUSTODIAL &amp; 3 MÔ HÌNH HỢP TÁC</div>
+          <div id="noncustodial-grid" style="display:grid;gap:12px;"></div>
+        </div>
+        <div>
+          <div class="kicker" style="color:var(--emerald);margin-bottom:10px;">B. PHÒNG THỦ THIÊN NGA ĐEN &amp; ĐỐI KHÁNG QUANT</div>
+          <div id="blackswan-grid" style="display:grid;gap:12px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare">
+      <div class="kicker">06 · Định Vị Thị Trường</div>
+      <h2>So Sánh Trực Diện Với Các Mô Hình Hiện Hành</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Tiêu chí</th>
+              <th style="color:#080e1a;background:var(--gold);">SONAM QUANT v4.1</th>
+              <th>Bot Grid / MQL5 Signal</th>
+              <th>Freqtrade / Jesse (OSS)</th>
+              <th>QuantConnect / Quỹ nhỏ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Bảo vệ vốn &amp; Non-Custodial</strong></td>
+              <td class="good">100% Non-Custodial · SL sàn + TWR-HWM &amp; Prop-8% 0.50× LIVE</td>
+              <td>Gồng lỗ / Martingale · Dễ cháy 100%</td>
+              <td>Tự viết rủi ro · Thiếu giáp 24/7</td>
+              <td>Tốt nhưng chi phí hạ tầng cao</td>
+            </tr>
+            <tr>
+              <td><strong>Chống Overfit</strong></td>
+              <td class="good">MaxAbsErr=0.0 · PBO=0.0% · 98 nhánh · Bootstrap 5.000</td>
+              <td>Không kiểm định mù · Dễ vẽ đường cong</td>
+              <td>Backtest cơ bản · Dễ lọt lookahead</td>
+              <td>Có công cụ nhưng phụ thuộc cloud</td>
+            </tr>
+            <tr>
+              <td><strong>Đa thị trường</strong></td>
+              <td class="good">MT5 Exness Live + CCXT 5 sàn Crypto (Paper-Testnet 30n · 36/36 test)</td>
+              <td>Chủ yếu 1 sàn MT4/MT5</td>
+              <td>Thuần Crypto, không chạy MT5</td>
+              <td>Thuê bao định kỳ, khó chạy TK Cent</td>
+            </tr>
+            <tr>
+              <td><strong>Chuẩn ECN &amp; Thiên Nga Đen</strong></td>
+              <td class="good">0% Toxic Flow · Jitter 1–3.5s · SL phía sàn + SAFE MODE 2 cấp</td>
+              <td>Dễ treo / bán tháo khi tin mạnh</td>
+              <td>Thuần dòng lệnh kỹ thuật</td>
+              <td>Cần đội vận hành chuyên trách</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sectors">
+      <div class="kicker">07 · Tầm Nhìn Phát Triển Đa Ngành</div>
+      <h2>Từ Giao Dịch Định Lượng Đến Hệ Điều Hành Ra Quyết Định 0-AI Đa Ngành</h2>
+      <div class="grid-2" id="sectors-grid"></div>
+    </section>
+
+    <section id="risks">
+      <div class="kicker">08 · Minh Bạch Chuẩn Quỹ</div>
+      <h2>Điểm Cần Lưu Ý &amp; Cơ Chế Kiểm Soát ĐANG CHẠY LIVE v4.1</h2>
+      <div class="grid-2" id="risk-grid"></div>
+    </section>
+
+    <section id="changelog">
+      <div class="kicker">09 · Nhật Ký Phiên Bản (Tự Động Hiển Thị Khi Cập Nhật)</div>
+      <h2>Lịch Sử Cập Nhật Bản Tĩnh</h2>
+      <div id="changelog-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>SONAM QUANT ECOSYSTEM</strong> · Bản tĩnh công khai không chứa bất kỳ mật khẩu, token, số tài khoản thật, tên miền nội bộ hay dữ liệu cá nhân nào.<br />
+      Toàn bộ chỉ số định lượng được trích xuất từ kiểm định mù 0-Lookahead và nhật ký đấu trường Forward tính tới ngày phát hành. Giao dịch tài chính luôn có rủi ro; kết quả mô phỏng và quá khứ không đảm bảo tuyệt đối lợi nhuận tương lai.
+    </div>
+  </footer>
+
+  <script>
+    const esc = (s) => String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+    const AUDIENCE_CONTENT = {
+      investor: [
+        { h: "TWR-HWM & Prop-8% 0.50× ĐANG CHẠY LIVE v4.1", p: "OOS $5k tăng lên $8,869 (Calmar 2.22); $50k+AC lên $84,908 (Live 25–26: +24.6%, tăng 3.8×); $250k+AC lên $403,507 (Live 25–26: +24.1%, tăng 5.3×)." },
+        { h: "100% Non-Custodial & Trần Thanh Khoản $266k–$534k", p: "0% giữ tiền khách; lượng hóa trước trượt giá Almgren-Chriss để phân bổ đa cụm thanh khoản $266k–$534k minh bạch, không phóng đại năng lực." },
+        { h: "Phòng Thủ Thiên Nga Đen & Tự Trị 0-AI 1–2 Năm", p: "100% SL cứng nằm trên máy chủ sàn, SAFE MODE Cấp Đỏ không bán tháo đáy flash-crash, tự sao lưu & lưu trữ xoay vòng 0 lệ thuộc LLM." }
+      ],
+      copy: [
+        { h: "0% Giữ Tiền Khách · Chỉ Đóng Lệnh Nhãn Copy", p: "Vốn nằm 100% trên tài khoản sàn chính chủ của khách; 1-click re-auth (BRD-206) admin 0-chạm mật khẩu thô; Crypto khóa cứng withdraw_disabled=True + Windows DPAPI." },
+        { h: "Trần Lỗ Cứng Plan A/B/C · Tương Thích Cả Cent & Pro", p: "Plan A ($300–$1k): 1.5%/4.5% · Plan B ($1.05k–$5k): 1.2%/3.6% · Plan C ($5.05k–$150k): 1.0%/3.0%. TK Cent chia lot 100× đạt +78.7% OOS & +30.1% Live 25–26." },
+        { h: "An Toàn Chủ Quyền & Dòng Lệnh A-Book/ECN Sạch", p: "0% Martingale, 0% tick-scalp, jitter 1.0–3.5s trên terminal độc lập, có 2 bot Telegram giám sát chéo & nút /killall khẩn cấp." }
+      ],
+      quant: [
+        { h: "Chứng Minh 0-Lookahead & CSCV PBO = 0.0%", p: "Truncate-Future 3 mốc cắt kèm đầu độc lệnh mở -999R đạt Global MaxAbsErr = 0.000000; CSCV PBO = 0.0% trên toàn bộ 5 mức vốn OOS." },
+        { h: "Giải Trình WR ~33–34% × Payoff Lồi & M = 98", p: "Payoff lồi ~2.6R–3.1R, rủi ro thực ~0.34%–0.45%/lệnh (10 lệnh thua liên tiếp chỉ sụt ~3.5%–4.5%); công khai & REJECT toàn bộ 98 nhánh VQ6..VQ14 trượt DSR(M=98)." },
+        { h: "Kiến Trúc Đối Kháng Carbon ↔ Neon & Alpha Trực Giao", p: "Tách bạch kiểm toán chéo đối kháng 2 tầng; phát triển động cơ H1/D1 tương quan |r| ≤ 0.196, sống khỏe dưới stress 2.0× phí." }
+      ]
+    };
+
+    /* FALLBACK_DATA:START */
+    const FALLBACK_DATA = {
+      "brand": "SONAM QUANT ECOSYSTEM",
+      "tagline": "Hệ Thống Giao Dịch Định Lượng Độc Lập 0-AI · 50% Vision / 50% Quant",
+      "version": "v4.1 Golden Release",
+      "release_date": "2026-11-26",
+      "commit_ref": "7ae76ae",
+      "permanent_url": "https://kenndjk0412-maker.github.io/sonam-quant/",
+      "hero_kpis": [
+        {
+          "value": "0-ML · 0.0",
+          "label": "Sai Số Nhìn Trước (MaxAbsErr)",
+          "sub": "Kiểm chứng Truncate-Future & đầu độc lệnh mở -999R · CSCV PBO = 0.0%"
+        },
+        {
+          "value": "98 Nhánh",
+          "label": "Kiểm Định Chống Overfit",
+          "sub": "VQ6 → VQ14 loại trung thực bằng Bootstrap 5.000 vòng · DSR(M=98)"
+        },
+        {
+          "value": "0-AI 24/7",
+          "label": "Vận Hành Độc Lập 1–2 Năm",
+          "sub": "TWR-HWM & Prop-8% 0.50× LIVE (7ae76ae) · Giáp SAFE MODE · XANH [5/5]"
+        },
+        {
+          "value": "$266k–$534k",
+          "label": "Trần Thanh Khoản (Capacity)",
+          "sub": "Đo bằng Almgren-Chriss OOS (Calmar ≥ 1.5 & PF ≥ 1.2) · 100% Non-Custodial"
+        }
+      ],
+      "multi_capital_oos": [
+        {
+          "tier": "$1,080 USD (Pro)",
+          "start_usd": 1080,
+          "end_usd": 3761,
+          "roi_pct": 248.1,
+          "roi_pct_v40": 262.1,
+          "cagr_pct": 53.8,
+          "max_dd_pct": 10.38,
+          "calmar": 5.18,
+          "sharpe": 1.66,
+          "pf": 1.72,
+          "n": 928,
+          "live_roi_pct": 109.8,
+          "live_end_usd": 2266,
+          "live_dd_pct": 16.55,
+          "note": "Live v4.1 (Prop-8% 0.50×) · Sàn min-lot 0.01 · Live 25–26: +109.8%"
+        },
+        {
+          "tier": "$1,080 Cent (USC)",
+          "start_usd": 1080,
+          "end_usd": 1931,
+          "roi_pct": 78.7,
+          "roi_pct_v40": 55.6,
+          "cagr_pct": 22.2,
+          "max_dd_pct": 10.43,
+          "calmar": 2.12,
+          "sharpe": 1.39,
+          "pf": 1.39,
+          "n": 941,
+          "live_roi_pct": 30.1,
+          "live_roi_pct_v40": 12.0,
+          "live_end_usd": 1406,
+          "live_dd_pct": 10.4,
+          "note": "Chia lot mịn 100× · Live 25–26: +30.1% (tăng 2.5× so với v4.0: +12.0%)"
+        },
+        {
+          "tier": "$5,000 USD (Pro)",
+          "start_usd": 5000,
+          "end_usd": 8869,
+          "roi_pct": 77.4,
+          "roi_pct_v40": 79.7,
+          "cagr_pct": 21.9,
+          "max_dd_pct": 9.86,
+          "calmar": 2.22,
+          "sharpe": 1.44,
+          "pf": 1.42,
+          "n": 928,
+          "live_roi_pct": 33.5,
+          "live_end_usd": 6675,
+          "live_dd_pct": 10.06,
+          "note": "Điểm cân bằng vàng · Calmar 2.22 · Live 25–26: +33.5% (DD 10.06%)"
+        },
+        {
+          "tier": "$50,000 USD (+AC k=0.7)",
+          "start_usd": 50000,
+          "end_usd": 84908,
+          "roi_pct": 69.8,
+          "roi_pct_v40": 43.9,
+          "cagr_pct": 20.0,
+          "max_dd_pct": 10.66,
+          "calmar": 1.88,
+          "sharpe": 1.28,
+          "pf": 1.36,
+          "n": 941,
+          "live_roi_pct": 24.6,
+          "live_roi_pct_v40": 6.4,
+          "live_end_usd": 62280,
+          "live_dd_pct": 10.47,
+          "note": "Trừ trượt giá AC k=0.70 · Live 25–26: +24.6% (tăng 3.8× từ +6.4%)"
+        },
+        {
+          "tier": "$250,000 USD (+AC k=0.7)",
+          "start_usd": 250000,
+          "end_usd": 403507,
+          "roi_pct": 61.4,
+          "roi_pct_v40": 45.0,
+          "cagr_pct": 18.0,
+          "max_dd_pct": 10.68,
+          "calmar": 1.68,
+          "sharpe": 1.16,
+          "pf": 1.32,
+          "n": 941,
+          "live_roi_pct": 24.1,
+          "live_roi_pct_v40": 4.5,
+          "live_end_usd": 310293,
+          "live_dd_pct": 10.69,
+          "note": "Trượt giá TB 0.034R/lệnh · Live 25–26: +24.1% (tăng 5.3× từ +4.5%)"
+        }
+      ],
+      "capacity_curve_k070": [
+        {
+          "cap_k": 1.08,
+          "cagr": 53.6,
+          "dd": 10.21,
+          "calmar": 5.25,
+          "pf": 1.72
+        },
+        {
+          "cap_k": 5,
+          "cagr": 21.4,
+          "dd": 9.62,
+          "calmar": 2.23,
+          "pf": 1.42
+        },
+        {
+          "cap_k": 25,
+          "cagr": 17.1,
+          "dd": 9.72,
+          "calmar": 1.76,
+          "pf": 1.37
+        },
+        {
+          "cap_k": 50,
+          "cagr": 17.5,
+          "dd": 9.02,
+          "calmar": 1.94,
+          "pf": 1.38
+        },
+        {
+          "cap_k": 100,
+          "cagr": 18.0,
+          "dd": 8.91,
+          "calmar": 2.02,
+          "pf": 1.39
+        },
+        {
+          "cap_k": 175,
+          "cagr": 16.4,
+          "dd": 9.01,
+          "calmar": 1.82,
+          "pf": 1.36
+        },
+        {
+          "cap_k": 250,
+          "cagr": 16.0,
+          "dd": 8.87,
+          "calmar": 1.8,
+          "pf": 1.35
+        },
+        {
+          "cap_k": 350,
+          "cagr": 15.7,
+          "dd": 8.97,
+          "calmar": 1.75,
+          "pf": 1.35
+        },
+        {
+          "cap_k": 500,
+          "cagr": 14.3,
+          "dd": 9.07,
+          "calmar": 1.58,
+          "pf": 1.32
+        },
+        {
+          "cap_k": 750,
+          "cagr": 10.6,
+          "dd": 8.53,
+          "calmar": 1.24,
+          "pf": 1.29
+        },
+        {
+          "cap_k": 1000,
+          "cagr": 10.0,
+          "dd": 8.28,
+          "calmar": 1.21,
+          "pf": 1.27
+        }
+      ],
+      "capacity_curve_k100": [
+        {
+          "cap_k": 1.08,
+          "cagr": 53.3,
+          "dd": 10.28,
+          "calmar": 5.19,
+          "pf": 1.72
+        },
+        {
+          "cap_k": 5,
+          "cagr": 19.9,
+          "dd": 9.97,
+          "calmar": 2.0,
+          "pf": 1.4
+        },
+        {
+          "cap_k": 25,
+          "cagr": 16.7,
+          "dd": 9.75,
+          "calmar": 1.72,
+          "pf": 1.36
+        },
+        {
+          "cap_k": 50,
+          "cagr": 18.1,
+          "dd": 8.89,
+          "calmar": 2.04,
+          "pf": 1.39
+        },
+        {
+          "cap_k": 100,
+          "cagr": 16.1,
+          "dd": 9.03,
+          "calmar": 1.78,
+          "pf": 1.35
+        },
+        {
+          "cap_k": 175,
+          "cagr": 15.6,
+          "dd": 8.96,
+          "calmar": 1.75,
+          "pf": 1.35
+        },
+        {
+          "cap_k": 250,
+          "cagr": 14.3,
+          "dd": 9.08,
+          "calmar": 1.57,
+          "pf": 1.32
+        },
+        {
+          "cap_k": 350,
+          "cagr": 10.5,
+          "dd": 8.51,
+          "calmar": 1.24,
+          "pf": 1.29
+        },
+        {
+          "cap_k": 500,
+          "cagr": 10.0,
+          "dd": 8.27,
+          "calmar": 1.2,
+          "pf": 1.27
+        },
+        {
+          "cap_k": 750,
+          "cagr": 9.3,
+          "dd": 8.38,
+          "calmar": 1.11,
+          "pf": 1.25
+        },
+        {
+          "cap_k": 1000,
+          "cagr": 8.4,
+          "dd": 8.47,
+          "calmar": 0.99,
+          "pf": 1.23
+        }
+      ],
+      "vq_trials_summary": [
+        {
+          "round": "VQ6–8",
+          "trials": 40,
+          "focus": "Xác suất / Phanh tuyến tính / CS20",
+          "verdict": "Loại (nhiễu đồng phương sai & hòa hằng số)"
+        },
+        {
+          "round": "VQ9",
+          "trials": 8,
+          "focus": "Bước nhảy BNS / BPV / Skew",
+          "verdict": "Loại (đảo dấu IS → OOS)"
+        },
+        {
+          "round": "VQ10",
+          "trials": 7,
+          "focus": "Hình học D1 KER/CHOP/PK",
+          "verdict": "Loại (lõi Vision VQ5 bất bại)"
+        },
+        {
+          "round": "VQ11",
+          "trials": 23,
+          "focus": "CPPI-2 / Asym / Streak",
+          "verdict": "Loại (thua vốn nhỏ & hằng số)"
+        },
+        {
+          "round": "VQ12",
+          "trials": 4,
+          "focus": "Tương quan AR_z / ResidMom",
+          "verdict": "Loại (ngược dấu bot 2 chiều)"
+        },
+        {
+          "round": "VQ13",
+          "trials": 13,
+          "focus": "EqGate / Vĩ mô PIT / CapGuard",
+          "verdict": "Loại (định lý Cauchy-Schwarz)"
+        },
+        {
+          "round": "VQ14",
+          "trials": 3,
+          "focus": "50/50 Parity / Erlang Queue",
+          "verdict": "Loại (0/30 ô p<0.05 · DSR≤0.067)"
+        }
+      ],
+      "orthogonal_strategies": [
+        {
+          "id": "tcu_dc120_h1",
+          "name": "Donchian 120/40 H1 (TSM)",
+          "tf": "H1",
+          "symbols": "XAUUSD · BTCUSD · ETHUSD",
+          "r_1x": [
+            92.35,
+            297.13,
+            312.49
+          ],
+          "r_2x": [
+            73.64,
+            257.15,
+            261.7
+          ],
+          "pf_1x": [
+            1.28,
+            1.67,
+            1.77
+          ],
+          "pf_2x": [
+            1.22,
+            1.55,
+            1.6
+          ],
+          "corr_max": 0.196,
+          "highlight": "ETHUSD dương 9/9 năm liên tiếp (2018–2026) · Vượt stress 2.0× phí"
+        },
+        {
+          "id": "tcu_dc55_d1",
+          "name": "Donchian 55/20 D1 (XAU-12)",
+          "tf": "D1",
+          "symbols": "XAUUSD · BTCUSD · ETHUSD · USTEC · USOIL",
+          "r_total": [
+            36.75,
+            51.73,
+            74.58,
+            11.72,
+            16.16
+          ],
+          "pf_total": [
+            2.7,
+            3.43,
+            6.24,
+            1.62,
+            1.61
+          ],
+          "corr_max": 0.018,
+          "highlight": "Đuôi sóng lớn D1 · Tương quan chỉ -0.018 với H1 (trùng < 0.7%)"
+        }
+      ],
+      "risk_disclosures": [
+        {
+          "title": "Chu Kỳ Kiểm Chứng Forward Đang Mở Rộng",
+          "framing": "Đấu trường Forward 0-AI đã ghi nhận 1.011 lệnh GL sạch (0 lỗi tách biệt) và đang tiếp tục tích lũy mẫu dài hạn chuẩn quỹ (150+ lệnh GL / 30+ lệnh Shadow thật trên từng ứng viên mới) trước mọi quyết định thăng hạng."
+        },
+        {
+          "title": "Hiệu Chỉnh Lot Nhỏ & Phanh Drawdown — ĐANG CHẠY LIVE v4.1 (7ae76ae)",
+          "framing": "Hệ thống ĐÃ ĐƯA VÀO CHẠY LIVE v4.1 (commit 7ae76ae) cả 2 bản vá định lượng thuần túy trên bot/vq_v3_quant.py: HWM điều chỉnh nạp/rút chuẩn TWR (chống phanh giả khi rút lãi) và phanh tỷ lệ thuận đơn vị Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k và 5.3× ở $250k)."
+        },
+        {
+          "title": "Kiểm Soát Trượt Giá & Trần Thanh Khoản (Capacity)",
+          "framing": "Chủ động mô hình hóa tác động thị trường Almgren-Chriss (k=0.70 chuẩn / k=1.00 stress) để xác định rõ vùng tối ưu $266k–$534k mỗi cụm thanh khoản — làm cơ sở phân bổ đa tài khoản và mở rộng hạ tầng đa sàn khi vượt quy mô."
+        },
+        {
+          "title": "Quản Trị Rủi Ro Đuôi & Trạng Thái Crypto Futures",
+          "framing": "MT5 Exness đang chạy Live tiền thật ổn định; nhánh Crypto CCXT 5 sàn (Binance/Bybit/BingX/Bitget/OKX, Isolated ≤ 3×, 36/36 test xanh) đang tích lũy đủ Cổng Sẵn Sàng 30 ngày / 30 lệnh Paper-Testnet trước khi bật tiền thật, song song tầng Vĩ mô PIT chạy Shadow độc lập."
+        }
+      ],
+      "stealth_layers": [
+        {
+          "title": "0% Toxic Flow (Dòng Lệnh Chuẩn A-Book / ECN)",
+          "desc": "Tần suất ~0.9–1.5 lệnh/ngày, nắm giữ nhiều giờ đến nhiều ngày trên M15/H1/H4/D1; 0% tick-scalp, 0% latency-arbitrage, 0% spam sửa lệnh từng giây nên tương thích hoàn toàn với mô hình thanh khoản ECN/A-Book mà không xung đột lợi ích với sàn."
+        },
+        {
+          "title": "Nhịp Trễ Bất Đồng Bộ 1.0–3.5s & Terminal Độc Lập",
+          "desc": "Cổng executor.py chèn jitter ngẫu nhiên 1.0–3.5 giây giữa các tài khoản (sau khi commit DB) trên từng terminal portable riêng biệt cho mỗi tài khoản/khách — triệt tiêu xung lực khớp lệnh đồng thời trong cùng 1 mili-giây."
+        },
+        {
+          "title": "Ẩn Tên Nguồn Chiến Lược & Két Sắt Alpha (chong_lo_ai.py)",
+          "desc": "Cờ mt5_an_ten_nguon mã hóa comment lệnh thành m412_<id> để che kín tên chiến lược gốc (giữ nguyên mã vận hành chuẩn của hệ thống), kết hợp két alpha_vault cục bộ và tường lửa DLP 5/5 cửa chặn tuyệt đối rò rỉ code sang Cloud AI."
+        },
+        {
+          "title": "Đa Hạ Tầng Thanh Khoản (MT5 Live + CCXT 5 Sàn Paper-Testnet)",
+          "desc": "MT5 Exness chạy Live tiền thật song song nhánh CCXT 5 sàn Crypto Futures (Binance, Bybit, BingX, Bitget, OKX · Isolated ≤ 3× · 36/36 tests xanh, đang tích lũy Cổng Sẵn Sàng 30 ngày Paper-Testnet); Chặng 2 tách cụm máy chủ Copy-Trade riêng & mở rộng Perp DEX."
+        }
+      ],
+      "anti_whale_armor": [
+        {
+          "title": "Radar Dấu Chân Cá Mập & Dòng Tiền Lớn",
+          "desc": "Theo dõi liên tục vị thế cá mập Hyperliquid, báo cáo Smart Money COT, dòng tiền Stablecoin và bộ chỉ báo hoảng loạn vĩ mô DXY / VIX / US10Y / Fear & Greed."
+        },
+        {
+          "title": "Bộ Lọc Bẫy Phá Vỡ Giả (Cứu -51.44R Thực Nghiệm)",
+          "desc": "Lõi VQ5_UNIFIED tích hợp cổng chặn bẫy is_trap, cấm ngược H4 và cấm bán chỉ số sai pha — tự động loại bỏ các cú đẩy râu quét thanh khoản của cá mập trước khi vào lệnh."
+        },
+        {
+          "title": "Khóa Giờ Thanh Khoản Mỏng & Chống Quét Râu Stop-Hunt",
+          "desc": "Khóa cứng 04:00–07:00 VN (21:00–23:59 UTC) khi spread giãn mạnh; đặt SL toán học 2×ATR14 ngoài vùng nhiễu râu và tắt dời BE sớm trên động cơ sóng lớn H1/D1 để không bị hất văng trước siêu sóng."
+        },
+        {
+          "title": "Khóa Nổ Dây Chuyền & Chống Săn Ngược Cỡ Lớn",
+          "desc": "Giới hạn 1 lệnh/cụm tài sản, phanh tỷ lệ 0.50× ĐANG CHẠY LIVE v4.1, SAFE MODE Cấp Đỏ tuyệt đối không bán tháo đúng đáy râu quét, và giới hạn cỡ lệnh theo Almgren-Chriss ($266k–$534k) để không lộ dấu chân cho Market-Maker."
+        }
+      ],
+      "non_custodial_models": [
+        {
+          "title": "100% Non-Custodial — 0% Giữ Tiền Khách Hàng",
+          "desc": "Tiền nằm 100% trên tài khoản sàn chính chủ (Exness/Crypto) của khách. Kết nối MT5 qua 1-click re-auth (BRD-206, admin 0-chạm mật khẩu thô), chỉ đóng các lệnh mang nhãn \"copy ...\" (0 đụng lệnh tự giao dịch). API Crypto khóa cứng withdraw_disabled=True + mã hóa Windows DPAPI."
+        },
+        {
+          "title": "Mô Hình 1 · Copy-Trade Theo Gói Trần Rủi Ro Cứng",
+          "desc": "Plan A ($300–$1k): trần 1.5%/lệnh · 4.5%/ngày · Plan B ($1.05k–$5k): trần 1.2%/lệnh · 3.6%/ngày · Plan C ($5.05k–$150k): trần 1.0%/lệnh · 3.0%/ngày. Hỗ trợ cả tài khoản Cent (USC chia lot 100×) lẫn Pro."
+        },
+        {
+          "title": "Mô Hình 2 · Managed Account Quỹ ($50k–$500k+)",
+          "desc": "Phân bổ theo trần thanh khoản Almgren-Chriss $266k–$534k/cụm; TWR-HWM & phanh tỷ lệ Prop-8% 0.50× ĐANG CHẠY LIVE v4.1 (7ae76ae) đảm bảo rút lãi không kích hoạt phanh giả và giữ MaxDD OOS ~10.7%."
+        },
+        {
+          "title": "Mô Hình 3 · Kiểm Toán Quant Độc Lập B2B (VQ-Lab)",
+          "desc": "Cung cấp dịch vụ kiểm định mù 0-Lookahead (Truncate-Future + đầu độc -999R), đo CSCV PBO, DSR kiểm định bội & mô phỏng trượt giá Almgren-Chriss cho quỹ nhỏ và đội quản lý tài sản."
+        }
+      ],
+      "black_swan_quant": [
+        {
+          "title": "Mất Điện / Đứt Cáp Cục Bộ — 100% SL Cứng Nằm Trên Máy Chủ Sàn",
+          "desc": "Mọi vị thế MT5 Exness gửi kèm SL cứng trực tiếp lên máy chủ sàn. Trên Crypto (live_engine.py), ngay khi khớp lập tức đặt STOP_MARKET reduceOnly=True; nếu đặt SL sàn lỗi thì đóng khẩn MARKET reduceOnly ngay lập tức và tự ngắt live_armed=False."
+        },
+        {
+          "title": "Sốc Thanh Khoản & Flash-Crash — Khóa Giờ & SAFE MODE Không Bán Tháo",
+          "desc": "Khóa cứng mở mới 04:00–07:00 VN (21:00–23:59 UTC) khi spread giãn & gap chuyển ngày; Crypto khóa cứng Isolated ≤ 3×; cầu chì SAFE MODE Cấp Đỏ chỉ bật paused=1 (ngừng mở mới) — tuyệt đối không bán tháo đúng đáy râu quét."
+        },
+        {
+          "title": "Giải Trình Quant: Vì Sao Win-Rate ~33–34% Vẫn Bền Vững?",
+          "desc": "Cơ cấu bất đối xứng dương: Win-rate ~33–34% × Payoff lồi ~2.6R–3.1R (cắt lỗ nhanh, thả đuôi siêu sóng). Rủi ro thực mỗi lệnh chỉ ~0.34%–0.45% vốn nên chuỗi 10 lệnh thua liên tiếp chỉ sụt ~3.5%–4.5% và tự hạ tốc êm 0.50× tại ngưỡng -8% DD."
+        },
+        {
+          "title": "Kỷ Luật Chống Ngụy Tạo Dữ Liệu (PBO = 0.0% · N_trials = 98)",
+          "desc": "CSCV PBO OOS = 0.0% trên toàn bộ 5 tầng vốn; mọi thử nghiệm VQ1..VQ14 đều ghi sổ công khai — thẳng tay REJECT toàn bộ 98 nhánh VQ6..VQ14 khi trượt chuẩn Bootstrap 5.000 & DSR(M=98) thay vì che giấu thất bại."
+        }
+      ],
+      "multi_sector_pillars": [
+        {
+          "sector": "Trục 1 · Đa Tài Sản Tài Chính",
+          "desc": "Đã phủ 5 lớp tài sản (Vàng · Crypto · Chỉ số · Năng lượng · FX) trên MT5 Live + CCXT 5 sàn Crypto (Paper-Testnet 30n); sẵn sàng mở rộng sang Cổ phiếu Mỹ/VN, Hàng hóa phái sinh và Perp DEX."
+        },
+        {
+          "sector": "Trục 2 · Kho Bạc & Phòng Hộ Doanh Nghiệp (Treasury)",
+          "desc": "Ứng dụng lõi quản trị rủi ro cứng + dữ liệu vĩ mô PIT để tự động phòng hộ biến động tỷ giá xuất nhập khẩu (FX), giá dầu/nguyên liệu và dòng tiền dự phòng doanh nghiệp."
+        },
+        {
+          "sector": "Trục 3 · Quant-as-a-Service & Kiểm Định Độc Lập",
+          "desc": "Thương mại hóa Phòng Lab GL + Phễu kiểm định mù 0-Lookahead 5 cổng như dịch vụ thẩm định chiến lược minh bạch cho quỹ nhỏ, đội quản lý tài sản và cộng đồng trader."
+        },
+        {
+          "sector": "Trục 4 · Hệ Điều Hành Tự Trị 0-AI Cho Ngành Rủi Ro Cao",
+          "desc": "Nhân bản nguyên khối kiến trúc AI nghiên cứu đối kháng (Carbon ↔ Neon) + Second Brain chuẩn Admiralty A–F + lõi thực thi 0-AI có SAFE MODE sang Pháp chế, Chuỗi cung ứng, Năng lượng và AIOps."
+        }
+      ],
+      "changelog": [
+        {
+          "date": "2026-11-26",
+          "ver": "v4.1 Golden Release (7ae76ae)",
+          "notes": "Đưa Đợt 6 lên CHẠY LIVE trên sản xuất: HWM chuẩn TWR điều chỉnh nạp/rút + Phanh tỷ lệ Prop-8% 0.50× (Live 25–26 tăng 3.8× ở $50k lên +24.6% và 5.3× ở $250k lên +24.1%); bổ sung Slide 14 Non-Custodial 0% giữ tiền · Phòng thủ Thiên Nga Đen · Giải trình Quant WR ~33–34% & chuẩn hóa Slide 9 tương thích thanh khoản ECN/A-Book."
+        },
+        {
+          "date": "2026-11-26",
+          "ver": "v4.0 Golden Release (7547e34)",
+          "notes": "Bổ sung 2 động cơ xu hướng trực giao tcu_dc55_d1 & tcu_dc120_h1 vào GL_ONLY (|r| ≤ 0.196, sống khỏe 2.0× phí); hoàn tất kiểm toán 98 nhánh VQ5..VQ14 giữ vững Champion VQ5_UNIFIED; Bộ Giáp 0-AI XANH [5/5] & 6/6."
+        },
+        {
+          "date": "2026-11-26",
+          "ver": "v3.9 Multi-Market & Resilience (2dd53d0 / 5ebd98a)",
+          "notes": "Hoàn thiện nhánh Crypto Futures CCXT 5 sàn (36/36 test xanh, tích lũy Cổng 30 ngày Paper-Testnet), tối ưu App điều hành :8766 và lưu trữ xoay vòng dài hạn 1–2 năm 0-AI."
+        }
+      ]
+    };
+    /* FALLBACK_DATA:END */
+
+    function fmtUsd(n) { return "$" + Number(n).toLocaleString("en-US"); }
+
+    function render(data) {
+      document.getElementById("brand-name").textContent = data.brand;
+      document.getElementById("version-pill").textContent = `GOLDEN EDITION · ${data.version} · ${data.release_date}`;
+      document.getElementById("commit-badge").textContent = `● XANH 0-AI [5/5] · Commit ${data.commit_ref}`;
+
+      document.getElementById("kpi-grid").innerHTML = (data.hero_kpis || []).map(k => `
+        <div class="kpi">
+          <div class="kpi-val">${esc(k.value)}</div>
+          <div class="kpi-lbl">${esc(k.label)}</div>
+          <div class="kpi-sub">${esc(k.sub)}</div>
+        </div>
+      `).join("");
+
+      document.getElementById("multicap-body").innerHTML = (data.multi_capital_oos || []).map(r => `
+        <tr>
+          <td><strong>${esc(r.tier)}</strong></td>
+          <td class="num">${fmtUsd(r.start_usd)}</td>
+          <td class="num good">${fmtUsd(r.end_usd)}</td>
+          <td class="num good">+${Number(r.roi_pct).toFixed(1)}%</td>
+          <td class="num dim">+${Number(r.roi_pct_v40 ?? r.roi_pct).toFixed(1)}%</td>
+          <td class="num good">+${Number(r.live_roi_pct ?? 0).toFixed(1)}%</td>
+          <td class="num">${Number(r.max_dd_pct).toFixed(2)}%</td>
+          <td class="num">${Number(r.calmar).toFixed(2)} / ${Number(r.sharpe).toFixed(2)}</td>
+          <td style="color:var(--muted);">${esc(r.note)}</td>
+        </tr>
+      `).join("");
+
+      document.getElementById("stealth-grid").innerHTML = (data.stealth_layers || FALLBACK_DATA.stealth_layers || []).map((s, i) => `
+        <div class="card" style="border-left:4px solid var(--gold);">
+          <h3>0${i + 1}. ${esc(s.title)}</h3>
+          <p>${esc(s.desc)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("whale-grid").innerHTML = (data.anti_whale_armor || FALLBACK_DATA.anti_whale_armor || []).map((w, i) => `
+        <div class="card" style="border-left:4px solid var(--emerald);">
+          <h3 style="color:var(--emerald);">Giáp #${i + 1} · ${esc(w.title)}</h3>
+          <p>${esc(w.desc)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("noncustodial-grid").innerHTML = (data.non_custodial_models || FALLBACK_DATA.non_custodial_models || []).map((nc, i) => `
+        <div class="card" style="border-left:4px solid var(--gold);">
+          <h3>0${i + 1}. ${esc(nc.title)}</h3>
+          <p>${esc(nc.desc)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("blackswan-grid").innerHTML = (data.black_swan_quant || FALLBACK_DATA.black_swan_quant || []).map((bs, i) => `
+        <div class="card" style="border-left:4px solid var(--emerald);">
+          <h3 style="color:var(--emerald);">0${i + 1}. ${esc(bs.title)}</h3>
+          <p>${esc(bs.desc)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("sectors-grid").innerHTML = (data.multi_sector_pillars || FALLBACK_DATA.multi_sector_pillars || []).map(sp => `
+        <div class="card" style="border-top:3px solid var(--gold);">
+          <h3>${esc(sp.sector)}</h3>
+          <p>${esc(sp.desc)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("risk-grid").innerHTML = (data.risk_disclosures || []).map((d, i) => `
+        <div class="card risk-card">
+          <h3>0${i + 1}. ${esc(d.title)}</h3>
+          <p>${esc(d.framing)}</p>
+        </div>
+      `).join("");
+
+      document.getElementById("changelog-list").innerHTML = (data.changelog || []).map(c => `
+        <div class="log-item">
+          <div class="log-meta">${esc(c.date)} · ${esc(c.ver)}</div>
+          <div class="log-text">${esc(c.notes)}</div>
+        </div>
+      `).join("");
+    }
+
+    function renderAud(key) {
+      const items = AUDIENCE_CONTENT[key] || AUDIENCE_CONTENT.investor;
+      document.getElementById("aud-panel").innerHTML = `<div class="aud-grid">${items.map(it => `
+        <div class="aud-item"><h3>${esc(it.h)}</h3><p>${esc(it.p)}</p></div>
+      `).join("")}</div>`;
+    }
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderAud(btn.dataset.aud);
+      });
+    });
+
+    renderAud("investor");
+    fetch("data.json?v=" + Date.now())
+      .then(r => r.ok ? r.json() : FALLBACK_DATA)
+      .then(render)
+      .catch(() => render(FALLBACK_DATA));
+  </script>
+</body>
+</html>
